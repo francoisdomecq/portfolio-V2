@@ -1,0 +1,11 @@
+/* .App {
+    height: 400vh;
+    width: 100vh;
+} */
+
+.Home {
+    min-height: 100vh;
+    background-image: url('../../assets/layered-waves-haikei.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

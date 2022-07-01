@@ -1,0 +1,92 @@
+.Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+}
+
+.Title {
+    color: white;
+}
+
+.Profile {
+    width: 3%;
+    border-radius: 50%;
+}
+
+.LinksContainer {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45%;
+    height: 10%;
+}
+
+.LinkText1 {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    animation: slideDown ease 0.6s forwards;
+}
+
+.LinkText2 {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    animation: slideDown ease 1.2s forwards;
+}
+
+.LinkText3 {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    animation: slideDown ease 1.8s forwards;
+}
+
+.LinkText4 {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    animation: slideDown ease 2.4s forwards;
+}
+
+.LinkText5 {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    animation: slideDown ease 3s forwards;
+}
+
+.LinkText1:hover,
+.LinkText2:hover,
+.LinkText3:hover,
+.LinkText4:hover,
+.LinkText5:hover {
+    color: aqua;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-40);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(50%);
+        opacity: 1;
+    }
+}
+
+.BackgroundTransparent {
+    background-color: transparent !important;
+    transition: background-color 0.8s ease-in;
+}
+
+.BackgroundRed {
+    background-color: RGB(18, 31, 49) !important;
+    transition: 0.4s;
+}

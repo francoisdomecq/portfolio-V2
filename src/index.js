@@ -18,7 +18,7 @@ root.render(
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/about">
+                {/* <Route exact path="/about">
                     <AboutMe />
                 </Route>
                 <Route exact path="/skills">
@@ -29,7 +29,7 @@ root.render(
                 </Route>
                 <Route exact path="/contact">
                     <ContactMe />
-                </Route>
+                </Route> */}
             </Switch>
         </Router>
     </React.StrictMode>

@@ -1,14 +1,8 @@
 import logo from '../../logo.svg';
-import './App.css';
+import './AboutMe.css';
 
 function AboutMe() {
-    return (
-        <div className="App">
-            <div>
-                <p>AboutMe</p>
-            </div>
-        </div>
-    );
+    return <div className="BackgroundAboutMe" id="AboutMe"></div>;
 }
 
 export default AboutMe;
