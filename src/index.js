@@ -4,12 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './index.css';
 
-import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
-import AboutMe from './pages/AboutMe/AboutMe';
-import Skills from './pages/Skills/Skills';
-import MyWork from './pages/MyWork/MyWork';
-import ContactMe from './pages/ContactMe/ContactMe';
+import App from './pages/App/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +14,7 @@ root.render(
             <Header />
             <Switch>
                 <Route exact path="/">
-                    <Home />
+                    <App />
                 </Route>
             </Switch>
         </Router>

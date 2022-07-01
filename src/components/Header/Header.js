@@ -25,22 +25,37 @@ function header() {
             {/* <img src={PhotoFR} alt="Profile" className="Profile" /> */}
             <div className="LinksContainer">
                 <div>
-                    <a className="LinkText1" href="#Home">
+                    <a
+                        className="LinkText LinkText1 hover-underline-animation"
+                        href="#Home"
+                    >
                         Home
                     </a>
                 </div>
                 <div>
-                    <a className="LinkText2" href="#AboutMe">
+                    <a
+                        className="LinkText LinkText2 hover-underline-animation"
+                        href="#AboutMe"
+                    >
                         About me
                     </a>
                 </div>
-                <a className="LinkText3" href="#projects">
+                <a
+                    className="LinkText LinkText3 hover-underline-animation"
+                    href="#projects"
+                >
                     Projects
                 </a>
-                <a className="LinkText4" href="#MySkills">
+                <a
+                    className="LinkText LinkText4 hover-underline-animation"
+                    href="#MySkills"
+                >
                     My skills
                 </a>
-                <a className="LinkText5" href="#Contact">
+                <a
+                    className="LinkText LinkText5 hover-underline-animation"
+                    href="#Contact"
+                >
                     Contact
                 </a>
             </div>

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 15%;
-    height: 10%;
+    height: 20%;
     margin-top: 6%;
     margin-left: 6%;
 }
@@ -20,15 +20,15 @@
 }
 
 .Name.first {
-    animation: FadeIn ease-in 0.5s forwards;
+    animation: FadeIn ease-in 0.3s forwards 0.5s;
 }
 
 .Name.second {
-    animation: FadeIn ease-in 0.5s forwards 0.7s;
+    animation: FadeIn ease-in 0.3s forwards 0.6s;
 }
 
 .Name.third {
-    animation: FadeIn ease-in 0.5s forwards 1.4s;
+    animation: FadeIn ease-in 0.3s forwards 0.7s;
 }
 
 @keyframes FadeIn {
@@ -47,13 +47,15 @@ span.BouncingLetter {
     font-size: 3rem;
     font-weight: 700;
     color: #fff;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
 }
 
-span.BouncingLetter:hover {
-    animation-name: rubberBand;
+span.bouncing {
+    display: -moz-inline-stack;
+    display: inline-block;
+    animation: rubberBand 800ms alternate ease-out;
     color: aqua;
 }
 

@@ -5,8 +5,100 @@
 
 .Home {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     background-image: url('../../assets/layered-waves-haikei.svg');
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+.ContainerDescription {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 6%;
+    width: 30%;
+}
+
+.Description {
+    color: white;
+    opacity: 0;
+    animation: FadeIn ease-in 0.3s forwards 0.8s;
+}
+
+@keyframes FadeIn {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ContainerAbout {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 6%;
+    width: 30%;
+}
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 30%;
+    border-radius: 1em;
+    background-color: transparent;
+    color: aqua;
+    border-color: aqua;
+    text-decoration: none;
+    box-shadow: inset 0px 0px 0px #2f3b47;
+    opacity: 0;
+    animation: FadeIn ease-in 0.3s forwards 0.9s 1;
+}
+
+.Button:hover {
+    cursor: pointer;
+    box-shadow: inset 150px 0px 0px rgb(68, 133, 133);
+}
+
+.Button,
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.underline--magical {
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #fa84f2 0%, #2478a2 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+}
+
+.underline--magical:hover {
+    background-size: 100% 80%;
 }

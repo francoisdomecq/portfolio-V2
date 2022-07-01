@@ -1,10 +1,26 @@
+import { useEffect } from 'react';
 import './Name.css';
 
 function Name() {
+    useEffect(() => {
+        const bouncy = document.querySelectorAll('.BouncingLetter');
+        bouncy.forEach((bounce) => {
+            bounce.addEventListener('mouseenter', toggleRubberBand);
+            function toggleRubberBand(e) {
+                bounce.classList.add('bouncing');
+                bounce.addEventListener('animationend', () => {
+                    bounce.classList.remove('bouncing');
+                });
+            }
+        });
+    }, []);
+
     return (
         <div className="ContainerName">
             <div className="Name first">
-                <span className="BouncingLetter">H</span>
+                <span className="BouncingLetter" id="h">
+                    H
+                </span>
                 <span className="BouncingLetter">i</span>
                 <span className="BouncingLetter">,</span>
             </div>

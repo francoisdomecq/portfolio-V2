@@ -1,7 +1,5 @@
 import './Home.css';
-import { useEffect, useState, Fragment } from 'react';
-
-import Header from '../../components/Header/Header';
+import { useEffect, useState } from 'react';
 import AboutMe from '../AboutMe/AboutMe';
 import Name from '../../components/Home_Name/Name';
 
@@ -20,17 +18,31 @@ function Home() {
             window.removeEventListener('touchmove', update);
         };
     }, [setX, setY]);
-    return (
-        <div style={{ height: '400vh' }}>
-            <div className="Home" id="Home">
-                {/* {console.log(x, y)} */}
-                <Name />
 
-                <div className="ContainerDescription">
-                    <p>I am a french </p>
-                </div>
+    return (
+        <div className="Home " id="Home">
+            <Name />
+            <div className="ContainerDescription">
+                <p className="Description">
+                    I am a french engineering student in Cognitive sciences at
+                    the{' '}
+                    <a
+                        className="underline--magical"
+                        rel="noreferrer"
+                        target={'_blank'}
+                        href="https://ensc.bordeaux-inp.fr/fr"
+                    >
+                        Ecole Nationale Supérieure de Cognitique
+                    </a>
+                    . I am passionate about developing software, websites and
+                    mobile applications..
+                </p>
             </div>
-            <AboutMe />
+            <div className="ContainerAbout">
+                <button className="Button">
+                    <a href="#AboutMe">About me</a>
+                </button>
+            </div>
         </div>
     );
 }
