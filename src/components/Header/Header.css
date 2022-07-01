@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 
 .Title {
@@ -80,6 +81,7 @@
 .BackgroundRed {
     background-color: RGB(18, 31, 49) !important;
     transition: 0.4s;
+    opacity: 0.9;
 }
 
 .w3rcontainer {

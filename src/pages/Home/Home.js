@@ -20,7 +20,7 @@ function Home() {
     }, [setX, setY]);
 
     return (
-        <div className="Home " id="Home">
+        <div className="Home  " id="Home">
             <Name />
             <div className="ContainerDescription">
                 <p className="Description">
@@ -38,7 +38,7 @@ function Home() {
                     mobile applications..
                 </p>
             </div>
-            <div className="ContainerAbout">
+            <div className="ContainerAboutButton">
                 <button className="Button">
                     <a href="#AboutMe">About me</a>
                 </button>

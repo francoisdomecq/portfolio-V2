@@ -1,7 +1,7 @@
 .App {
     display: flex;
     min-height: 100vh;
-    /* background-color: #1b1919; */
+    background-color: #1b1919;
     background-image: url('../../assets/layered-waves-haikei.svg');
     background-size: 100%;
     background-repeat: no-repeat;
