@@ -1,0 +1,87 @@
+.ContainerName {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 15%;
+    height: 10%;
+    margin-top: 6%;
+    margin-left: 6%;
+}
+
+.Name {
+    display: flex;
+    color: white;
+    opacity: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.Name.first {
+    animation: FadeIn ease-in 0.5s forwards;
+}
+
+.Name.second {
+    animation: FadeIn ease-in 0.5s forwards 0.7s;
+}
+
+.Name.third {
+    animation: FadeIn ease-in 0.5s forwards 1.4s;
+}
+
+@keyframes FadeIn {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+span.BouncingLetter {
+    display: -moz-inline-stack;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+span.BouncingLetter:hover {
+    animation-name: rubberBand;
+    color: aqua;
+}
+
+@keyframes rubberBand {
+    0% {
+        transform: scaleX(1);
+    }
+    40% {
+        transform: scaleX(1.06) scaleY(0.9);
+    }
+    55% {
+        transform: scaleX(0.95) scaleY(1.06);
+    }
+    65% {
+        transform: scaleX(1.09) scaleY(0.85);
+    }
+    75% {
+        transform: scaleX(0.9) scaleY(1);
+    }
+    90% {
+        transform: scaleX(1.05) scaleY(0.95);
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}

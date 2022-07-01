@@ -4,7 +4,8 @@
 } */
 
 .Home {
-    min-height: 100vh;
+    display: flex;
+    height: 100vh;
     background-image: url('../../assets/layered-waves-haikei.svg');
     background-size: 100%;
     background-repeat: no-repeat;

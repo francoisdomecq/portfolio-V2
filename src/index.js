@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
 
 import Home from './pages/Home/Home';
+import Header from './components/Header/Header';
 import AboutMe from './pages/AboutMe/AboutMe';
 import Skills from './pages/Skills/Skills';
 import MyWork from './pages/MyWork/MyWork';
@@ -14,22 +15,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Router>
+            <Header />
             <Switch>
                 <Route exact path="/">
                     <Home />
                 </Route>
-                {/* <Route exact path="/about">
-                    <AboutMe />
-                </Route>
-                <Route exact path="/skills">
-                    <Skills />
-                </Route>
-                <Route exact path="/work">
-                    <MyWork />
-                </Route>
-                <Route exact path="/contact">
-                    <ContactMe />
-                </Route> */}
             </Switch>
         </Router>
     </React.StrictMode>
