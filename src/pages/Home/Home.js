@@ -6,6 +6,7 @@ import Name from '../../components/Home_Name/Name';
 function Home() {
     const [x, setX] = useState();
     const [y, setY] = useState();
+
     useEffect(() => {
         const update = (e) => {
             setX(e.x);
@@ -19,9 +20,17 @@ function Home() {
         };
     }, [setX, setY]);
 
+
     return (
         <section className="Home  " id="Home">
             <Name />
+            <div
+                id="mouseCoord"
+                style={{ position: 'absolute', right: 0, bottom: 0 }}
+            >
+                <span id="mouseX"></span>
+                <span id="mouseY"></span>
+            </div>
             <div className="ContainerDescription">
                 <p className="Description">
                     I am a french engineering student in Cognitive sciences at

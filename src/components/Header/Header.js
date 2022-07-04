@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './Header.css';
 
 function Header() {
-    const [isMenuOpen, setMenuState] = useState(false);
     const [showLinks, setShowLinks] = useState(false);
 
     const handleShowLinks = () => {
@@ -29,18 +28,6 @@ function Header() {
             prevScrollpos = currentScrollPos;
         }
     };
-
-    function openMenu() {
-        const menu = document.getElementById('LinksCont');
-        var navbar = document.getElementById('navbar');
-        if (menu.style.display === 'flex') {
-            menu.style.display = 'none';
-            setMenuState(false);
-        } else {
-            menu.style.display = 'flex';
-            setMenuState(true);
-        }
-    }
 
     return (
         <nav

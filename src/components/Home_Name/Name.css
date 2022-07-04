@@ -87,3 +87,12 @@ span.bouncing {
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
 }
+
+@media screen and (max-width: 468px) {
+    .ContainerName {
+        margin-top: 35%;
+    }
+    .BouncingLetter {
+        font-size: 1em !important;
+    }
+}
