@@ -1,9 +1,16 @@
 .BackgroundAboutMe {
     display: flex;
     min-height: 100vh;
-    min-width: 100vh;
+    max-width: 100%;
+    background-color: red;
 }
 
+@media screen and (max-width: 900px) {
+    .BackgroundAboutMe {
+        max-width: 100% !important;
+        background-color: blue;
+    }
+}
 .gradient-background-about {
     background: linear-gradient(300deg, #00bfff, #e0d3de, #02c39a);
     background-size: 180% 180%;
@@ -24,7 +31,9 @@
 
 .Container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     padding-left: 1%;
     padding-right: 1%;
     width: 100%;
@@ -32,22 +41,23 @@
 
 .ContainerAbout {
     display: flex;
-    width: 30%;
-    height: 100%;
+    width: 45%;
+    height: 85%;
     border-radius: 33% 67% 30% 70% / 67% 74% 26% 33%;
     background: linear-gradient(300deg, #00bfff, #e0d3de, #02c39a);
 }
 
 .ContainerPic {
     width: 30%;
+    z-index: -1;
     justify-self: flex-end;
-    align-self: flex-end;
     opacity: 0;
     animation: SlideIn ease-in 0.8s forwards;
 }
 .ProfilePic {
-    width: 55%;
+    width: 80%;
     border-radius: 50%;
+    align-self: center;
 }
 
 @keyframes SlideIn {

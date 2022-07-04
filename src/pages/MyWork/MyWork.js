@@ -1,7 +1,7 @@
 import logo from '../../logo.svg';
 import Spline from '@splinetool/react-spline';
 
-import './App.css';
+import './Work.css';
 
 function MyWork() {
     return (

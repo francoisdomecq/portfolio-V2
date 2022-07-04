@@ -20,7 +20,7 @@ function Home() {
     }, [setX, setY]);
 
     return (
-        <div className="Home  " id="Home">
+        <section className="Home  " id="Home">
             <Name />
             <div className="ContainerDescription">
                 <p className="Description">
@@ -43,7 +43,7 @@ function Home() {
                     <a href="#AboutMe">About me</a>
                 </button>
             </div>
-        </div>
+        </section>
     );
 }
 

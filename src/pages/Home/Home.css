@@ -6,16 +6,24 @@
 .Home {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 100%;
     background-image: url('../../assets/layered-waves-haikei.svg');
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-color: #000;
+}
+
+@media screen and(max-width:900px) {
+    .Home {
+        max-width: 50vw !important;
+    }
 }
 
 .ContainerDescription {
     display: flex;
     margin-top: 3%;
-    margin-left: 6%;
+    padding-left: 6%;
     width: 30%;
 }
 
@@ -54,7 +62,7 @@
     border-color: aqua;
     text-decoration: none;
     box-shadow: inset 0px 0px 0px #2f3b47;
-    opacity: 0;
+
     animation: FadeIn ease-in 0.3s forwards 0.9s 1;
 }
 
