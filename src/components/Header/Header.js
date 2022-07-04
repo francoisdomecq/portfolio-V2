@@ -48,7 +48,7 @@ function Header() {
             id="navbar"
         >
             <ul className="navbar_links">
-                <li className="navbar_item">
+                <li className="navbar_item slideInDown-1">
                     <a
                         className="navbar_link navbar_link1 hover-underline-animation"
                         href="#Home"
@@ -56,7 +56,7 @@ function Header() {
                         Home
                     </a>
                 </li>
-                <li className="navbar_item">
+                <li className="navbar_item slideInDown-2">
                     <a
                         className="navbar_link navbar_link2 hover-underline-animation"
                         href="#AboutMe"
@@ -64,7 +64,7 @@ function Header() {
                         About me
                     </a>
                 </li>
-                <li className="navbar_item">
+                <li className="navbar_item slideInDown-3">
                     <a
                         className="navbar_link navbar_link3 hover-underline-animation"
                         href="#projects"
@@ -72,7 +72,7 @@ function Header() {
                         Projects
                     </a>
                 </li>
-                <li className="navbar_item">
+                <li className="navbar_item slideInDown-4">
                     <a
                         className="navbar_link navbar_link4 hover-underline-animation"
                         href="#MySkills"
@@ -80,7 +80,7 @@ function Header() {
                         My skills
                     </a>
                 </li>
-                <li className="navbar_item">
+                <li className="navbar_item slideInDown-5">
                     <a
                         className="navbar_link navbar_link5 hover-underline-animation"
                         href="#Contact"
