@@ -29,16 +29,7 @@
     font-weight: 500;
     font-size: 1em;
 }
-.filter-projects-button {
-    display: flex;
-    text-align: center;
-    width: fit-content;
-    padding: 0.5em;
-    border-radius: 1em;
-    border: 0.1em solid aqua;
-    color: aqua;
-    cursor: pointer;
-}
+
 
 .container-projects {
     display: flex;
