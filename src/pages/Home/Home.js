@@ -20,9 +20,8 @@ function Home() {
         };
     }, [setX, setY]);
 
-
     return (
-        <section className="Home  " id="Home">
+        <section className="Home  " id="home">
             <Name />
             <div
                 id="mouseCoord"
@@ -47,10 +46,10 @@ function Home() {
                     mobile applications..
                 </p>
             </div>
-            <div className="ContainerAboutButton">
-                <button className="Button">
-                    <a href="#AboutMe">About me</a>
-                </button>
+            <div className="div-button-scroll-about-me">
+                <a href="#aboutme">
+                    <button className="button-scroll-about-me">About me</button>
+                </a>
             </div>
         </section>
     );

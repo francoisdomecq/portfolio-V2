@@ -1,12 +1,10 @@
 import logo from '../../logo.svg';
-import './App.css';
+import './Contact.css';
 
 function ContactMe() {
     return (
-        <div className="App">
-            <div>
-                <p>Hi</p>
-            </div>
+        <div id="contact">
+            <div></div>
         </div>
     );
 }

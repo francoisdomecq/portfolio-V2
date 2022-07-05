@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Header.css';
 
 function Header() {
@@ -8,26 +8,31 @@ function Header() {
         setShowLinks(!showLinks);
     };
 
-    var prevScrollpos = window.pageYOffset;
-
-    window.onscroll = function () {
-        if (window.innerWidth > 900) {
-            var currentScrollPos = window.pageYOffset;
-            var navbar = document.getElementById('navbar');
-            if (prevScrollpos > currentScrollPos) {
-                if (currentScrollPos < 30) {
-                    navbar.classList.remove('BackgroundRed');
-                    navbar.classList.add('BackgroundTransparent');
+    useEffect(() => {
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            if (window.innerWidth > 900) {
+                var currentScrollPos = window.pageYOffset;
+                var navbar = document.getElementById('navbar');
+                if (prevScrollpos > currentScrollPos) {
+                    if (currentScrollPos < 100) {
+                        navbar.classList.remove('background-color');
+                        navbar.classList.add('background-transparent');
+                    } else {
+                        navbar.classList.add('background-color');
+                    }
+                    navbar.style.top = '0';
                 } else {
-                    navbar.classList.add('BackgroundRed');
+                    if (currentScrollPos <= 100) {
+                        navbar.classList.add('background-color');
+                    } else {
+                        navbar.style.top = '-10%';
+                    }
                 }
-                navbar.style.top = '0';
-            } else {
-                navbar.style.top = '-10%';
+                prevScrollpos = currentScrollPos;
             }
-            prevScrollpos = currentScrollPos;
-        }
-    };
+        };
+    });
 
     return (
         <nav
@@ -38,7 +43,8 @@ function Header() {
                 <li className="navbar_item slideInDown-1">
                     <a
                         className="navbar_link navbar_link1 hover-underline-animation"
-                        href="#Home"
+                        href="#home"
+                        onClick={() => setShowLinks()}
                     >
                         Home
                     </a>
@@ -46,7 +52,8 @@ function Header() {
                 <li className="navbar_item slideInDown-2">
                     <a
                         className="navbar_link navbar_link2 hover-underline-animation"
-                        href="#AboutMe"
+                        href="#aboutme"
+                        onClick={() => setShowLinks()}
                     >
                         About me
                     </a>
@@ -55,6 +62,7 @@ function Header() {
                     <a
                         className="navbar_link navbar_link3 hover-underline-animation"
                         href="#projects"
+                        onClick={() => setShowLinks()}
                     >
                         Projects
                     </a>
@@ -62,7 +70,8 @@ function Header() {
                 <li className="navbar_item slideInDown-4">
                     <a
                         className="navbar_link navbar_link4 hover-underline-animation"
-                        href="#MySkills"
+                        href="#skills"
+                        onClick={() => setShowLinks()}
                     >
                         My skills
                     </a>
@@ -70,7 +79,8 @@ function Header() {
                 <li className="navbar_item slideInDown-5">
                     <a
                         className="navbar_link navbar_link5 hover-underline-animation"
-                        href="#Contact"
+                        href="#contact"
+                        onClick={() => setShowLinks()}
                     >
                         Contact
                     </a>

@@ -2,7 +2,6 @@
     display: flex;
     min-height: 100vh;
     max-width: 100%;
-    background-color: red;
 }
 
 @media screen and (max-width: 900px) {
@@ -47,20 +46,32 @@
     background: linear-gradient(300deg, #00bfff, #e0d3de, #02c39a);
 }
 
-.ContainerPic {
+.profile-picture-container {
     width: 30%;
-    z-index: -1;
+    z-index: 100;
     justify-self: flex-end;
-    opacity: 0;
-    animation: SlideIn ease-in 0.8s forwards;
 }
-.ProfilePic {
+
+.profile-picture {
     width: 80%;
     border-radius: 50%;
     align-self: center;
+    opacity: 1;
 }
 
-@keyframes SlideIn {
+/* .reveal {
+    justify-self: flex-end;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal .active {
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+/* @keyframes SlideIn {
     0% {
         transform: skew(45deg, 15deg);
         transform: translateX(-100vh);
@@ -74,4 +85,4 @@
         opacity: 1;
         transform-origin: 0%;
     }
-}
+} */

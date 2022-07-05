@@ -5,7 +5,7 @@ import './Work.css';
 
 function MyWork() {
     return (
-        <div className="App">
+        <div className="App" id="projects">
             <div>
                 <p>Hi</p>
             </div>

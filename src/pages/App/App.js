@@ -1,6 +1,8 @@
 import AboutMe from '../AboutMe/AboutMe';
+import ContactMe from '../ContactMe/ContactMe';
 import Home from '../Home/Home';
 import MyWork from '../MyWork/MyWork';
+import Skills from '../Skills/Skills';
 
 import './App.css';
 function App() {
@@ -16,18 +18,20 @@ function App() {
 
     return (
         <div className="ResponsiveApp">
-            <div className="scrollToTopButton">
+            {/* <div className="top_scroller_div">
                 <button
                     id="scroller"
-                    className="button"
+                    className="top_scroller_button"
                     onClick={() => window.scrollTo({ top: 0 })}
                 >
                     <span>Scroll to top</span>
                 </button>
-            </div>
+            </div> */}
             <Home />
             <AboutMe />
             <MyWork />
+            <Skills />
+            <ContactMe />
         </div>
     );
 }

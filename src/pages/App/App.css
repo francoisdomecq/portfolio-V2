@@ -4,14 +4,14 @@
     }
 }
 
-.scrollToTopButton {
+.top_scroller_div {
     visibility: hidden;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
 }
 
-button {
+.top_scroller_button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,11 +25,7 @@ button {
     transition: all 0.8s ease-out;
 }
 
-button:hover {
-    cursor: pointer;
-}
-
-.scrollToTopButton .show {
+.top_scroller_div .show {
     visibility: visible;
     opacity: 1;
 }
