@@ -1,7 +1,7 @@
 import AboutMe from '../AboutMe/AboutMe';
 import ContactMe from '../ContactMe/ContactMe';
 import Home from '../Home/Home';
-import MyWork from '../MyWork/MyWork';
+import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 
 import './App.css';
@@ -29,7 +29,7 @@ function App() {
             </div> */}
             <Home />
             <AboutMe />
-            <MyWork />
+            <Projects />
             <Skills />
             <ContactMe />
         </div>

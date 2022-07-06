@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -36,4 +34,9 @@ ul {
 
 button:hover {
     cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Hauora Sans';
+    src: url('./fonts/HauoraSans/Hauora-Regular.woff') format('woff');
 }

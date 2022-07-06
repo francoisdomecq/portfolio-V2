@@ -1,23 +1,24 @@
-import logo from '../../logo.svg';
-import Spline from '@splinetool/react-spline';
-
-import './Work.css';
 import { useState } from 'react';
-import FilterButton from '../../components/Projects_FilterButton/Projects_FilterButton';
 
-function MyWork() {
+import FilterButton from '../../components/Projects_FilterButton/Projects_FilterButton';
+import ProjectContainer from '../../components/Projects_ProjectContainer/Projects_ProjectContainer';
+
+import './Projects.css';
+
+import { projects } from '../../data/projects.js';
+
+function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('');
+    const [selectedProject, setSelectedProject] = useState('');
 
     const changeColorsPrevious = () => {
         const previousFilterElement = document.getElementById(selectedFilter);
-        previousFilterElement.style.backgroundColor = '#302d2d';
-        previousFilterElement.style.color = 'aqua';
+        previousFilterElement.classList.toggle('active');
     };
 
     const changeColorsNew = (elementId) => {
         const element = document.getElementById(elementId);
-        element.style.backgroundColor = 'aqua';
-        element.style.color = '#302d2d';
+        element.classList.toggle('active');
     };
 
     const selectFilter = (filter) => {
@@ -33,6 +34,10 @@ function MyWork() {
         }
         setSelectedFilter(filter);
     };
+
+    const selectProject = (project) => {
+        setSelectedProject(project);
+    };
     return (
         <div className="page-projects" id="projects">
             <h1 className="title-projects">My projects</h1>
@@ -46,10 +51,19 @@ function MyWork() {
                 />
                 <FilterButton selectFilter={selectFilter} filter="TypeScript" />
             </div>
-            
-            <div className="container-projects"></div>
+
+            <div className="container-projects">
+                {projects.map((project) => {
+                    return (
+                        <ProjectContainer
+                            project={project}
+                            setProjet={selectProject}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 }
 
-export default MyWork;
+export default Projects;
