@@ -9,7 +9,7 @@ import Image3 from '../assets/Ensciens/Image3.PNG';
 import Image4 from '../assets/Ensciens/Image4.PNG';
 import Image5 from '../assets/Ensciens/Image5.PNG';
 
-export const projects = [
+export const projectsData = [
     {
         name: 'Encsiens',
         src: Ensciens,
@@ -90,7 +90,7 @@ export const projects = [
             'Jeu de type RogueLike, codé en application console, où le joueur évolue dans un univers de pirate',
         descriptionEn:
             'RogueLike game, programmed as a console application, where the player evolves in a pirate universe',
-        languages: ['C#'],
+        languages: ['C#', 'React JS'],
         images: [Image1, Image2, Image3, Image4, Image5],
         descritptionLongueFr: '',
         descriptionLongueEn: '',

@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import './Projects_ProjectContainer.css';
 
 function ProjectContainer({ project, setProjet }) {
-    useEffect(() => {
+    function addRippleEffect() {
         let rippleElements = document.getElementsByClassName('myRipple');
         for (var i = 0; i < rippleElements.length; i++) {
             rippleElements[i].onclick = function (e) {
@@ -22,25 +23,51 @@ function ProjectContainer({ project, setProjet }) {
                 }, 900);
             };
         }
-    });
+    }
+
+    useEffect(() => {
+        const containers = document.getElementsByClassName('project-container');
+        for (let i = 0; i < containers.length; i++) {
+            containers[i].classList.add('load');
+        }
+        addRippleEffect();
+    }, []);
 
     return (
-        <div className="project-container">
-            <button className="project-container-top myRipple">
-                <p className="project-name">{project.name}</p>
-                <img className="project-image" src={project.src} alt="" />
-                <p className="project-description">{project.descriptionEn}</p>
-            </button>
-            <div className="project-container-bottom">
+        <motion.div
+            layout
+            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="project-container "
+        >
+            <motion.button layout className="project-container-top myRipple">
+                <motion.p layout className="project-name">
+                    {project.name}
+                </motion.p>
+                <motion.img
+                    layout
+                    className="project-image"
+                    src={project.src}
+                    alt=""
+                />
+                <motion.p className="project-description">
+                    {project.descriptionEn}
+                </motion.p>
+            </motion.button>
+            <motion.div layout className="project-container-bottom">
                 {project.languages.map((language) => {
                     return (
-                        <div className="project-technology-container">
-                            <p className="project-technology">{language}</p>
-                        </div>
+                        <motion.div className="project-technology-container">
+                            <motion.p className="project-technology">
+                                {language}
+                            </motion.p>
+                        </motion.div>
                     );
                 })}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
 

@@ -1,66 +1,50 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-import FilterButton from '../../components/Projects_FilterButton/Projects_FilterButton';
 import ProjectContainer from '../../components/Projects_ProjectContainer/Projects_ProjectContainer';
+import Filter from '../../components/Projects_Filter/Project_Filter';
 
 import './Projects.css';
 
-import { projects } from '../../data/projects.js';
+import { projectsData } from '../../data/projects.js';
 
 function Projects() {
-    const [selectedFilter, setSelectedFilter] = useState('');
-    const [selectedProject, setSelectedProject] = useState('');
-
-    const changeColorsPrevious = () => {
-        const previousFilterElement = document.getElementById(selectedFilter);
-        previousFilterElement.classList.toggle('active');
-    };
-
-    const changeColorsNew = (elementId) => {
-        const element = document.getElementById(elementId);
-        element.classList.toggle('active');
-    };
-
-    const selectFilter = (filter) => {
-        if (filter !== selectedFilter) {
-            if (selectedFilter === '') {
-                changeColorsNew(filter);
-            } else {
-                changeColorsPrevious();
-                changeColorsNew(filter);
-            }
-        } else {
-            changeColorsNew(filter);
-        }
-        setSelectedFilter(filter);
-    };
+    const [selectedFilter, setSelectedFilter] = useState('Default');
+    const [projects, setProjects] = useState([]);
+    const [filteredProjects, setFilteredProjects] = useState([]);
+    const [selectedProject, setSelectedProject] = useState({});
 
     const selectProject = (project) => {
         setSelectedProject(project);
     };
+
+    useEffect(() => {
+        setProjects(projectsData);
+        setFilteredProjects(projectsData);
+    }, []);
+
     return (
         <div className="page-projects" id="projects">
             <h1 className="title-projects">My projects</h1>
-            <div className="filter-projects-container">
-                <h2 className="title-filter">Filter by </h2>
-                <FilterButton selectFilter={selectFilter} filter="React JS" />
-                <FilterButton selectFilter={selectFilter} filter="JavaScript" />
-                <FilterButton
-                    selectFilter={selectFilter}
-                    filter="React Native"
-                />
-                <FilterButton selectFilter={selectFilter} filter="TypeScript" />
-            </div>
+            <Filter
+                selectedFilter={selectedFilter}
+                setSelectedFilter={setSelectedFilter}
+                projects={projects}
+                setFilteredProjects={setFilteredProjects}
+            />
 
             <div className="container-projects">
-                {projects.map((project) => {
-                    return (
-                        <ProjectContainer
-                            project={project}
-                            setProjet={selectProject}
-                        />
-                    );
-                })}
+                <AnimatePresence>
+                    {filteredProjects.map((project) => {
+                        return (
+                            <ProjectContainer
+                                key={project.name}
+                                project={project}
+                                setProjet={selectProject}
+                            />
+                        );
+                    })}
+                </AnimatePresence>
             </div>
         </div>
     );

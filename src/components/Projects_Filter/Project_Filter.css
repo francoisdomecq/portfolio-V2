@@ -1,0 +1,33 @@
+.filter-projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    margin-top: 2.5%;
+    object-fit: cover;
+}
+
+.title-filter {
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.filter-projects-button {
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    padding: 0.3em 1em 0.3em 1em;
+    border: 0.1em solid aqua;
+    border-radius: 1rem;
+    color: aqua;
+    box-shadow: inset 0 0 0 0;
+    transition: all 0.8s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: aqua;
+    color: #1c1c1e;
+}
