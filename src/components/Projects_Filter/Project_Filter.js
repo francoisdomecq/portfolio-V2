@@ -30,6 +30,7 @@ function Filter({
             {filters.map((filter) => {
                 return (
                     <div
+                        key={filter}
                         className={
                             selectedFilter === filter
                                 ? `filter-projects-button active`

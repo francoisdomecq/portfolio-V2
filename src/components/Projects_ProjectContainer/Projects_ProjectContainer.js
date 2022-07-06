@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Projects_ProjectContainer.css';
 
-function ProjectContainer({ project, setProjet }) {
+function ProjectContainer({ project, setProject }) {
     function addRippleEffect() {
         let rippleElements = document.getElementsByClassName('myRipple');
         for (var i = 0; i < rippleElements.length; i++) {
@@ -41,6 +41,7 @@ function ProjectContainer({ project, setProjet }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
             className="project-container "
+            onClick={() => setProject(project)}
         >
             <motion.button layout className="project-container-top myRipple">
                 <motion.p layout className="project-name">
@@ -59,7 +60,10 @@ function ProjectContainer({ project, setProjet }) {
             <motion.div layout className="project-container-bottom">
                 {project.languages.map((language) => {
                     return (
-                        <motion.div className="project-technology-container">
+                        <motion.div
+                            key={language}
+                            className="project-technology-container"
+                        >
                             <motion.p className="project-technology">
                                 {language}
                             </motion.p>

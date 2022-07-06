@@ -12,10 +12,12 @@ function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('Default');
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
-    const [selectedProject, setSelectedProject] = useState({});
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const selectProject = (project) => {
         setSelectedProject(project);
+        const element = document.getElementById('project');
+        element.classList.toggle('load');
     };
 
     useEffect(() => {
@@ -23,7 +25,17 @@ function Projects() {
         setFilteredProjects(projectsData);
     }, []);
 
-    return (
+    return selectedProject ? (
+        <div
+            style={{ backgroundColor: 'red' }}
+            className="page-projects"
+            id="projects"
+        >
+            <div className="page-project" id="project">
+                <p>{selectProject.name}</p>
+            </div>
+        </div>
+    ) : (
         <div className="page-projects" id="projects">
             <h1 className="title-projects">My projects</h1>
             <Filter
@@ -40,7 +52,7 @@ function Projects() {
                             <ProjectContainer
                                 key={project.name}
                                 project={project}
-                                setProjet={selectProject}
+                                setProject={selectProject}
                             />
                         );
                     })}

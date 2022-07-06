@@ -26,3 +26,15 @@
         grid-template-columns: 1fr;
     }
 } */
+
+#project {
+    height: 150px;
+    width: 1px;
+    opacity: 0;
+    transition: all 0.75s ease;
+}
+#project.load {
+    opacity: 1;
+    height: 150px;
+    width: 500px;
+}
