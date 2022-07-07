@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import AboutMe from '../AboutMe/AboutMe';
 import ContactMe from '../ContactMe/ContactMe';
 import Home from '../Home/Home';
@@ -6,15 +8,25 @@ import Skills from '../Skills/Skills';
 
 import './App.css';
 function App() {
-    window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-
-        if (currentScrollPos > window.innerHeight / 2) {
-            document.getElementById('scroller').classList.add('show');
-        } else {
-            document.getElementById('scroller').classList.remove('show');
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal-on-scroll');
+        console.log(reveals);
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 125;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add('active-on-scroll');
+            } else {
+                reveals[i].classList.remove('active-on-scroll');
+            }
         }
-    };
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', reveal);
+        reveal();
+    });
 
     return (
         <div className="ResponsiveApp">

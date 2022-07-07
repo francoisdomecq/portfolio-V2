@@ -25,8 +25,9 @@ function Filter({
     }, [selectedFilter]);
 
     return (
-        <div className="filter-projects-container">
+        <div className="filter-projects-container reveal-on-scroll">
             <h2 className="title-filter">Filter by </h2>
+
             {filters.map((filter) => {
                 return (
                     <div

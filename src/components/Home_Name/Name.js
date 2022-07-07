@@ -60,6 +60,7 @@ function Name() {
                 <span className="BouncingLetter">e</span>
                 <span className="BouncingLetter">e</span>
                 <span className="BouncingLetter">r</span>
+                <span className="BouncingLetter">.</span>
             </div>
         </div>
     );

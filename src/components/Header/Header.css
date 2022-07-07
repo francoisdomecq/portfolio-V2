@@ -22,14 +22,13 @@
 }
 
 .navbar_link {
-    font-size: 1em;
+    font-size: 1.2em;
     color: white;
     text-decoration: none;
     opacity: 0;
     padding: 0 0.3rem;
     width: auto;
     height: 5%;
-    /* transition: opacity 0.5s ease-out; */
 }
 
 .navbar_link:hover {

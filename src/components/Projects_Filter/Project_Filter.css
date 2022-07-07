@@ -1,21 +1,33 @@
 .filter-projects-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
-    width: 60%;
+    justify-content: center;
     margin-top: 2.5%;
     object-fit: cover;
+    border: 0.1em solid aqua;
+    border-radius: 1em;
+    padding: 0.8em 1em 0.8em 1em;
+    gap: 0 1.5em;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+}
+
+.filter-projects-container.active-on-scroll {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .title-filter {
-    color: white;
+    color: aqua;
     font-weight: 500;
     font-size: 1em;
 }
 
 .filter-projects-button {
     display: flex;
+
     width: fit-content;
     text-align: center;
     padding: 0.3em 1em 0.3em 1em;

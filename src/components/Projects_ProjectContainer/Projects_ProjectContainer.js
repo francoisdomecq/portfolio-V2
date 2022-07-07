@@ -40,7 +40,7 @@ function ProjectContainer({ project, setProject }) {
             initial={{ opacity: 0, scale: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="project-container "
+            className="project-container"
             onClick={() => setProject(project)}
         >
             <motion.button layout className="project-container-top myRipple">

@@ -14,11 +14,12 @@ function Projects() {
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
 
-    const selectProject = (project) => {
-        setSelectedProject(project);
-        const element = document.getElementById('project');
-        element.classList.toggle('load');
-    };
+    async function selectProject(project) {
+        await setSelectedProject(project);
+        document
+            .getElementById('SelectedProject')
+            .classList.add('reveal-selected-project');
+    }
 
     useEffect(() => {
         setProjects(projectsData);
@@ -26,18 +27,13 @@ function Projects() {
     }, []);
 
     return selectedProject ? (
-        <div
-            style={{ backgroundColor: 'red' }}
-            className="page-projects"
-            id="projects"
-        >
-            <div className="page-project" id="project">
-                <p>{selectProject.name}</p>
-            </div>
-        </div>
+        <section className="page-project " id="SelectedProject">
+            <button onClick={() => setSelectedProject(null)}>Reset</button>
+            <p style={{ color: 'white' }}>{selectedProject.name}</p>
+        </section>
     ) : (
-        <div className="page-projects" id="projects">
-            <h1 className="title-projects">My projects</h1>
+        <section className="page-projects" id="projects">
+            <h1 className="title-projects reveal-on-scroll">My projects</h1>
             <Filter
                 selectedFilter={selectedFilter}
                 setSelectedFilter={setSelectedFilter}
@@ -45,7 +41,7 @@ function Projects() {
                 setFilteredProjects={setFilteredProjects}
             />
 
-            <div className="container-projects">
+            <div className="container-projects reveal-on-scroll">
                 <AnimatePresence>
                     {filteredProjects.map((project) => {
                         return (
@@ -58,7 +54,7 @@ function Projects() {
                     })}
                 </AnimatePresence>
             </div>
-        </div>
+        </section>
     );
 }
 

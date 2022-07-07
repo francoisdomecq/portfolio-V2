@@ -1,71 +1,77 @@
-.BackgroundAboutMe {
+.container-about-me-background {
     display: flex;
-    min-height: 100vh;
+    flex-direction: column;
     max-width: 100%;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 900px) {
     .BackgroundAboutMe {
         max-width: 100% !important;
-        background-color: blue;
-    }
-}
-.gradient-background-about {
-    background: linear-gradient(300deg, #00bfff, #e0d3de, #02c39a);
-    background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
-}
-
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
     }
 }
 
-.Container {
+.title-about-me {
+    color: #050b13;
+}
+
+.container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    text-align: left;
     padding-left: 1%;
     padding-right: 1%;
     width: 100%;
+    margin-top: 1.5rem;
 }
 
-.ContainerAbout {
+.about-text-container {
     display: flex;
+    flex-direction: column;
     width: 45%;
-    height: 85%;
-    border-radius: 33% 67% 30% 70% / 67% 74% 26% 33%;
-    background: linear-gradient(300deg, #00bfff, #e0d3de, #02c39a);
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.5s ease;
+}
+
+.about-text-container.active-on-scroll {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-text {
+    font-size: 1rem;
+    font-family: 'Hauora sans';
+    font-weight: 500;
+    color: #050b13;
 }
 
 .profile-picture-container {
     width: 30%;
     z-index: 100;
     justify-self: flex-end;
+    /* margin-top: 5em; */
 }
 
 .profile-picture {
     width: 80%;
     border-radius: 50%;
     align-self: center;
-    opacity: 1;
-}
-
-/* .reveal {
-    justify-self: flex-end;
-    transform: translateY(150px);
     opacity: 0;
-    transition: 1s all ease;
+    transform: translateX(100px);
+    transition: all 0.5s ease;
 }
 
+.profile-picture.active-on-scroll {
+    transform: translateX(0);
+    opacity: 1 !important;
+}
+
+/*
 .reveal .active {
     transform: translateY(0);
     opacity: 1;

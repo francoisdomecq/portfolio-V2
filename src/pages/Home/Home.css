@@ -3,17 +3,15 @@
     flex-direction: column;
     min-height: 100vh;
     max-width: 100%;
-    background-image: url('../../assets/layered-waves-haikei.svg');
-    background-size: 100%;
-    background-repeat: no-repeat;
     height: 100vh;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
 }
 
 .ContainerDescription {
     display: flex;
     margin-top: 3%;
     padding-left: 6%;
-    width: 30%;
+    width: 40%;
 }
 
 .Description {
@@ -45,10 +43,10 @@
     justify-content: center;
     height: 3em;
     width: 30%;
-    border-radius: 1em;
+    border-radius: 1rem;
     background-color: transparent;
     color: aqua;
-    border-color: aqua;
+    border: 0.1rem solid aqua;
     text-decoration: none;
     box-shadow: inset 0px 0px 0px #2f3b47;
     opacity: 0;
@@ -58,7 +56,9 @@
 
 .button-scroll-about-me:hover {
     cursor: pointer;
-    box-shadow: inset 150px 0px 0px rgb(0, 181, 181);
+    box-shadow: inset 150px 0px 0px rgb(0, 255, 255);
+    color: #050b13;
+    border: 0.1rem solid #050b13;
 }
 
 .button-scroll-about-me,

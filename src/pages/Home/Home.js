@@ -51,6 +51,7 @@ function Home() {
                     <button className="button-scroll-about-me">About me</button>
                 </a>
             </div>
+            {/*Ajouter une animation à droite qui lorsque l'on clique dessus redirige vers la page avec un jeu que je dois coder, ajouter leaderbord avec mail */}
         </section>
     );
 }
