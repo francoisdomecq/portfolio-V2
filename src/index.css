@@ -40,3 +40,24 @@ button:hover {
     font-family: 'Hauora Sans';
     src: url('./fonts/HauoraSans/Hauora-Regular.woff') format('woff');
 }
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    padding: 0.1em;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #20202a;
+    background-color: #20202a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #383844;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #585865;
+}

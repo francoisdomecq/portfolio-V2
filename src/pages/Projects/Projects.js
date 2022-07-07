@@ -16,9 +16,18 @@ function Projects() {
 
     async function selectProject(project) {
         await setSelectedProject(project);
-        document
-            .getElementById('SelectedProject')
-            .classList.add('reveal-selected-project');
+        const element = document.getElementById('SelectedProject');
+        element.classList.add('reveal-selected-project');
+        const height = element.offsetTop;
+        window.scrollTo(0, height - 10);
+    }
+
+    async function resetProject() {
+        await setSelectedProject(null);
+        const element = document.getElementsByClassName('reveal-on-scroll');
+        for (let i = 0; i < element.length; i++) {
+            element[i].classList.toggle('active-on-scroll');
+        }
     }
 
     useEffect(() => {
@@ -27,20 +36,25 @@ function Projects() {
     }, []);
 
     return selectedProject ? (
-        <section className="page-project " id="SelectedProject">
-            <button onClick={() => setSelectedProject(null)}>Reset</button>
-            <p style={{ color: 'white' }}>{selectedProject.name}</p>
+        <section className="page-projects">
+            <section className="page-project " id="SelectedProject">
+                <div className="page-project-back-button">
+                    <span onClick={() => resetProject()}>&#8249; Go back</span>
+                </div>
+
+                <p style={{ color: 'white' }}>{selectedProject.name}</p>
+            </section>
         </section>
     ) : (
         <section className="page-projects" id="projects">
             <h1 className="title-projects reveal-on-scroll">My projects</h1>
+
             <Filter
                 selectedFilter={selectedFilter}
                 setSelectedFilter={setSelectedFilter}
                 projects={projects}
                 setFilteredProjects={setFilteredProjects}
             />
-
             <div className="container-projects reveal-on-scroll">
                 <AnimatePresence>
                     {filteredProjects.map((project) => {
