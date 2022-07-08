@@ -7,6 +7,7 @@ import Filter from '../../components/Projects_Filter/Project_Filter';
 import './Projects.css';
 
 import { projectsData } from '../../data/projects.js';
+import GitHubIcon from '../../assets/githubLight.svg';
 
 function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('Default');
@@ -17,7 +18,7 @@ function Projects() {
     async function selectProject(project) {
         await setSelectedProject(project);
         const element = document.getElementById('SelectedProject');
-        element.classList.add('reveal-selected-project');
+        element.classList.add('reveal-selected-project', 'project-slide-in');
         const height = element.offsetTop;
         window.scrollTo(0, height - 10);
     }
@@ -28,6 +29,9 @@ function Projects() {
         for (let i = 0; i < element.length; i++) {
             element[i].classList.toggle('active-on-scroll');
         }
+        const project = document.getElementById('SelectedProject');
+        await project.classList.remove('project-slide-in');
+        await project.classList.add('project-slide-out');
     }
 
     useEffect(() => {
@@ -40,9 +44,55 @@ function Projects() {
             <section className="page-project " id="SelectedProject">
                 <div className="page-project-back-button">
                     <span onClick={() => resetProject()}>&#8249; Go back</span>
+                    {/* <p style={{ color: 'white' }}>{selectedProject.name}</p> */}
                 </div>
+                <div className="page-project-content-container">
+                    <div className="page-project-slider-container">
+                        <p>aha</p>
+                    </div>
 
-                <p style={{ color: 'white' }}>{selectedProject.name}</p>
+                    <div className="page-project-description-container">
+                        <div className="page-project-description">
+                            <h1 className="page-project-title">Description</h1>
+                            <p className="page-project-description-text ">
+                                {selectedProject.descritptionLongueFr}
+                            </p>
+                        </div>
+                        <div className="page-project-bottom-container">
+                            <div className="page-project-informations">
+                                <h1 className="page-project-title">
+                                    Complementary informations
+                                </h1>
+                                <p className="page-project-description-text">
+                                    Développement Frontend
+                                </p>
+                                <div className="page-project-separator" />
+                                <p className="page-project-description-text">
+                                    Durée
+                                </p>
+                                <div className="page-project-separator" />
+                                <p className="page-project-description-text">
+                                    Equipe
+                                </p>
+                                <div className="page-project-separator" />
+                                <a
+                                    rel="noreferrer"
+                                    href={selectedProject.github}
+                                    target="_blank"
+                                    alt="Lien vers le dépôt github"
+                                >
+                                    <img
+                                        className="page-project-icon"
+                                        src={GitHubIcon}
+                                        alt="Icon Link to GitHub repository"
+                                    />
+                                </a>
+                            </div>
+                            <div className="page-project-technologies"></div>
+                            {/*Ou alors truc 3d qui bouge avec les technologies */}
+                        </div>
+                    </div>
+                </div>
             </section>
         </section>
     ) : (
