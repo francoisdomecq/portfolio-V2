@@ -8,6 +8,8 @@ import './Projects.css';
 
 import { projectsData } from '../../data/projects.js';
 import GitHubIcon from '../../assets/githubLight.svg';
+import reactIcon from '../../assets/React.svg';
+import TypeScript from '../../assets/typescript.svg';
 
 function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('Default');
@@ -21,6 +23,15 @@ function Projects() {
         element.classList.add('reveal-selected-project', 'project-slide-in');
         const height = element.offsetTop;
         window.scrollTo(0, height - 10);
+    }
+
+    function moveImages() {
+        var elements = document.getElementById(
+            'page-project-technologies'
+        ).children;
+        for (let i = 0; i < elements.length; i++) {
+            const element = elements[i];
+        }
     }
 
     async function resetProject() {
@@ -88,7 +99,22 @@ function Projects() {
                                     />
                                 </a>
                             </div>
-                            <div className="page-project-technologies"></div>
+                            <div
+                                className="page-project-technologies"
+                                id="page-project-technologies"
+                                onClick={() => moveImages()}
+                            >
+                                {/* <div className="icons-container"> */}
+                                <img
+                                    className="page-project-icon "
+                                    src={TypeScript}
+                                />
+                                <img
+                                    className="page-project-icon "
+                                    src={reactIcon}
+                                />
+                                {/* </div> */}
+                            </div>
                             {/*Ou alors truc 3d qui bouge avec les technologies */}
                         </div>
                     </div>
