@@ -145,6 +145,7 @@
     background-color: #2f2f3a;
     border-radius: 1em;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .icons-container {
@@ -179,8 +180,6 @@
 
 .page-project-icon {
     position: relative;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    animation: move 10s ease-in-out infinite;
 }
 
 canvas {
@@ -189,8 +188,4 @@ canvas {
     background-color: #2f2f3a;
     padding: 1em;
     border-radius: 1em;
-}
-
-.page-project-icons {
-    position: absolute  ;
 }

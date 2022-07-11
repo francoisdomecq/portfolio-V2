@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { TweenLite, Linear, TimelineLite } from 'gsap/gsap-core';
 
 import ProjectContainer from '../../components/Projects_ProjectContainer/Projects_ProjectContainer';
 import Filter from '../../components/Projects_Filter/Project_Filter';
@@ -10,12 +11,14 @@ import { projectsData } from '../../data/projects.js';
 import GitHubIcon from '../../assets/githubLight.svg';
 import reactIcon from '../../assets/React.svg';
 import TypeScript from '../../assets/typescript.svg';
+import gsap from 'gsap';
 
 function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('Default');
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
+    const [positions, setPositions] = useState([]);
 
     async function selectProject(project) {
         await setSelectedProject(project);
@@ -23,15 +26,6 @@ function Projects() {
         element.classList.add('reveal-selected-project', 'project-slide-in');
         const height = element.offsetTop;
         window.scrollTo(0, height - 10);
-    }
-
-    function moveImages() {
-        var elements = document.getElementById(
-            'page-project-technologies'
-        ).children;
-        for (let i = 0; i < elements.length; i++) {
-            const element = elements[i];
-        }
     }
 
     async function resetProject() {
@@ -48,7 +42,64 @@ function Projects() {
     useEffect(() => {
         setProjects(projectsData);
         setFilteredProjects(projectsData);
-    }, []);
+        // if (selectedProject) {
+        //     moveImages();
+        // }
+    }, [selectedProject]);
+
+    function random(max) {
+        return Math.random() * max;
+    }
+
+    function moveImages() {
+        var images = document.getElementsByClassName('page-project-icon');
+        var container = document.getElementById('page-project-technologies');
+        container.addEventListener('mouseenter', () => {
+            for (let i = 0; i < images.length; i++) {
+                console.log(
+                    'container',
+                    container.getBoundingClientRect().width,
+                    container.getBoundingClientRect().height
+                );
+                console.log('images', images[i].clientHeight);
+                const position = images[i].offsetTop;
+                images[i].animate(
+                    {
+                        top:
+                            random(
+                                container.getBoundingClientRect().height / 2
+                            ) -
+                            images[i].getBoundingClientRect().height +
+                            'px',
+                        left:
+                            random(
+                                container.getBoundingClientRect().width / 2
+                            ) -
+                            images[i].getBoundingClientRect().width +
+                            'px',
+                    },
+                    {
+                        duration: 5000,
+                        iterations: Infinity,
+                    }
+                );
+            }
+        });
+
+        // var object = document.getElementsByClassName('page-project-icon');
+        // console.log(object);
+        // const element = document.getElementById('page-project-technologies');
+
+        // console.log(element);
+        // for (let i = 0; i < object.length; i++) {
+        //     var x = Math.floor(Math.random() * element.clientWidth);
+
+        //     var y = Math.floor(Math.random() * element.clientHeight);
+        //     object[i].style.top =
+        //         object[i].getBoundingClientRect().y + y + 'px';
+        //     object[i].style.left = x + 'px';
+        // }
+    }
 
     return selectedProject ? (
         <section className="page-projects">
@@ -92,11 +143,11 @@ function Projects() {
                                     target="_blank"
                                     alt="Lien vers le dépôt github"
                                 >
-                                    <img
+                                    {/* <img
                                         className="page-project-icon"
                                         src={GitHubIcon}
                                         alt="Icon Link to GitHub repository"
-                                    />
+                                    /> */}
                                 </a>
                             </div>
                             <div
@@ -105,6 +156,14 @@ function Projects() {
                                 onClick={() => moveImages()}
                             >
                                 {/* <div className="icons-container"> */}
+                                <img
+                                    className="page-project-icon "
+                                    src={TypeScript}
+                                />
+                                <img
+                                    className="page-project-icon "
+                                    src={reactIcon}
+                                />
                                 <img
                                     className="page-project-icon "
                                     src={TypeScript}
