@@ -13,21 +13,30 @@ function Filter({
     };
 
     useEffect(() => {
-        if (selectedFilter === 'Default') {
+        if (selectedFilter === 'All') {
             setFilteredProjects(projects);
         } else {
-            const filtered = projects.filter((project) => {
-                if (project.languages.includes(selectedFilter)) return project;
-                return null;
-            });
+            let filtered = [];
+            let newFilter = {};
+            for (let i = 0; i < projects.length; i++) {
+                newFilter = {};
+                const languages = projects[i].languages;
+                for (let j = 0; j < languages.length; j++) {
+                    if (languages[j].includes(selectedFilter)) {
+                        console.log(projects[i].name, languages[j]);
+                        newFilter = projects[i];
+                    }
+                }
+                if (Object.keys(newFilter).length !== 0) {
+                    filtered = [...filtered, newFilter];
+                }
+            }
             setFilteredProjects(filtered);
         }
-    }, [selectedFilter]);
+    }, [selectedFilter, projects, setFilteredProjects]);
 
     return (
         <div className="filter-projects-container reveal-on-scroll">
-            <h2 className="title-filter">Filter by </h2>
-
             {filters.map((filter) => {
                 return (
                     <div

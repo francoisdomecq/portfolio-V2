@@ -2,6 +2,7 @@ import Ensciens from '../assets/Projets/Ensciens.svg';
 import RapJeu from '../assets/Projets/RapJeu.svg';
 import Baroudeurs from '../assets/Projets/Baroudeurs.svg';
 import RogueLike from '../assets/Projets/RogueLike.svg';
+import Portfolio from '../assets/Projets/Portfolio.svg';
 
 import Image1 from '../assets/Ensciens/Image1.PNG';
 import Image2 from '../assets/Ensciens/Image2.PNG';
@@ -13,27 +14,10 @@ export const projectsData = [
     {
         name: 'Encsiens',
         src: Ensciens,
-        descriptionFr:
-            "Réseau social au sein de l'école pour suivre la vie étudiante et être au courant des prochains évènements",
         descriptionEn:
             'Social network within the school to follow student life and be aware of upcoming events',
-        languages: ['React Native', 'ASP .NET Core'],
+        languages: ['React Native', 'Typescript', 'C# - ASP .NET Core'],
         images: [Image1, Image2, Image3, Image4, Image5],
-        descritptionLongueFr: (
-            <p>
-                L'objectif de ce projet était de créer une{' '}
-                <span style={{ textDecoration: 'underline' }}>
-                    application mobile
-                </span>
-                . L'application développée ici est un réseau social propre à
-                l'ENSC. Les différents bureaux, clubs et élèves de l'école
-                peuvent poster des publications. Ils peuvent également suivre
-                les différents évènements à venir ainsi que voir l'avancée de la
-                coupe des familles. Cette application permet également aux
-                étudiants qui n'ont pas Facebook d'être tenu au courant de la
-                vie étudiante de l'école.
-            </p>
-        ),
         descriptionLongueEn: (
             <p>
                 The aim of this project was to create a mobile application. The
@@ -45,8 +29,6 @@ export const projectsData = [
                 kept up to date with the school's student life.
             </p>
         ),
-        technologiesFr:
-            "Pour réaliser l'application, nous avons dans un premier temps dû réaliser une API Rest",
         technologiesEn: '',
         rapportProjet: './Bernard_Domecq_MOBI_Projet.pdf',
         github: '',
@@ -54,15 +36,11 @@ export const projectsData = [
     {
         name: 'Rap Jeu',
         src: RapJeu,
-        descriptionFr:
-            "Application web pour jouer au jeu Rap Jeu issu de l'émission du même name",
         descriptionEn:
             'Web application to play the game Rap Game from the youtube show of the same name',
-        languages: ['React JS', 'Node JS'],
+        languages: ['React', 'Node JS', 'Javascript'],
         images: [Image1, Image2, Image3, Image4, Image5],
-        descritptionLongueFr: '',
         descriptionLongueEn: '',
-        technologiesFr: '',
         technologiesEn: '',
         rapportProjet: '',
         github: 'https://github.com/francoisdomecq/Rap-Jeu',
@@ -70,15 +48,11 @@ export const projectsData = [
     {
         name: 'Baroudeurs',
         src: Baroudeurs,
-        descriptionFr:
-            "Application mobile promouvant l'exploration de villes dans le style des jeux vidéos",
         descriptionEn:
             'Mobile application promoting the exploration of cities in the manner of world exploration in video games',
-        languages: ['React Native'],
+        languages: ['React Native', 'Typescript'],
         images: [Image1, Image2, Image3, Image4, Image5],
-        descritptionLongueFr: '',
         descriptionLongueEn: '',
-        technologiesFr: '',
         technologiesEn: '',
         rapportProjet: '',
         github: '',
@@ -86,17 +60,23 @@ export const projectsData = [
     {
         name: 'RogueLike Pirate',
         src: RogueLike,
-        descriptionFr:
-            'Jeu de type RogueLike, codé en application console, où le joueur évolue dans un univers de pirate',
         descriptionEn:
             'RogueLike game, programmed as a console application, where the player evolves in a pirate universe',
-        languages: ['C#', 'React JS'],
+        languages: ['C#'],
         images: [Image1, Image2, Image3, Image4, Image5],
-        descritptionLongueFr: '',
         descriptionLongueEn: '',
-        technologiesFr: '',
         technologiesEn: '',
         rapportProjet: '',
         github: 'https://github.com/francoisdomecq/RogueLike_Domecq_Leger',
+    },
+    {
+        name: 'Portfolio website',
+        src: Portfolio,
+        descriptionEn: 'My personal portfolio website',
+        languages: ['React', 'Javascript'],
+        images: [],
+        descriptionLongueEn: '',
+        technologiesEn: '',
+        rapportProjet: '',
     },
 ];

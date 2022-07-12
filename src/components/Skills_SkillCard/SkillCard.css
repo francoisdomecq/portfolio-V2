@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
     width: auto;
 }
 
@@ -37,11 +36,8 @@
     align-items: center;
     font-size: 1.3em;
     border-radius: 50%;
-    border: 5px solid black;
-}
-
-.skill-card:nth-child(1) .skill-level {
-    background-color: #52ff4f28;
-    border-color: #52ff4f;
-    color: #52ff4f;
+    border: 0.1em solid;
+    background-color: #46869528;
+    border-color: #4ffffc;
+    color: #4ffffc;
 }

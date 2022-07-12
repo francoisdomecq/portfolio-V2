@@ -3,8 +3,8 @@
 .project-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     background-color: #2c2c3a;
     box-shadow: 0px 5px 5px 0px #000;
     border-radius: 1em;
@@ -56,7 +56,7 @@
 .project-image {
     display: flex;
     align-self: center;
-    width: 50%;
+    width: 35%;
 }
 
 .project-name {

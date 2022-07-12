@@ -14,11 +14,10 @@ import TypeScript from '../../assets/typescript.svg';
 import gsap from 'gsap';
 
 function Projects() {
-    const [selectedFilter, setSelectedFilter] = useState('Default');
+    const [selectedFilter, setSelectedFilter] = useState('All');
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
-    const [positions, setPositions] = useState([]);
 
     async function selectProject(project) {
         await setSelectedProject(project);
@@ -192,6 +191,7 @@ function Projects() {
             />
             <div className="container-projects reveal-on-scroll">
                 <AnimatePresence>
+                    {console.log(filteredProjects)}
                     {filteredProjects.map((project) => {
                         return (
                             <ProjectContainer

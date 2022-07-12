@@ -1,1 +1,1 @@
-export const filters = ['Default', 'React JS', 'React Native', 'JavaScript'];
+export const filters = ['All', 'React', 'C#', 'Javascript', 'Typescript'];
