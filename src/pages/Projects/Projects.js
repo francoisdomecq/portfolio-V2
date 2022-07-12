@@ -20,9 +20,8 @@ function Projects() {
     const [selectedProject, setSelectedProject] = useState(null);
 
     async function selectProject(project) {
-        await setTimeout(() => {
-            setSelectedProject(project);
-        }, 1000);
+        await setSelectedProject(project);
+
         const element = document.getElementById('SelectedProject');
         element.classList.add('reveal-selected-project', 'project-slide-in');
         const height = element.offsetTop;
