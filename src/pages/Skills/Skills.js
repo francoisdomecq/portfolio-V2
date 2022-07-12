@@ -5,6 +5,7 @@ import Filter from '../../components/Skills_Filter/Filter';
 import './Skills.css';
 
 import { technologiesData } from '../../data/technologies';
+import { AnimatePresence } from 'framer-motion';
 /*
 Software : 
 C#, python, git, 
@@ -32,28 +33,26 @@ function Skills() {
     return (
         <div className="skills-section" id="skills">
             <h1 className="title-skills reveal-on-scroll">My skills</h1>
-            {/*  selectedFilter,
-    setSelectedFilter,
-    technologies,
-    setFilteredTechnologies, */}
             <Filter
                 selectedFilter={selectedFilter}
                 setSelectedFilter={setSelectedFilter}
                 technologies={technologies}
                 setFilteredTechnologies={setFilterTechnologies}
             />
-            <div className="skills-filter-container"></div>
-            <div className="skills-container">
-                {filteredTechnologies.map((technology) => {
-                    return (
-                        <SkillCard
-                            name={technology.name}
-                            img={technology.img}
-                            level={technology.level}
-                            info={technology.info}
-                        />
-                    );
-                })}
+            <div className="skills-container reveal-on-scroll">
+                <AnimatePresence>
+                    {filteredTechnologies.map((technology) => {
+                        return (
+                            <SkillCard
+                                key={technology.name}
+                                name={technology.name}
+                                img={technology.img}
+                                level={technology.level}
+                                info={technology.info}
+                            />
+                        );
+                    })}
+                </AnimatePresence>
             </div>
         </div>
     );

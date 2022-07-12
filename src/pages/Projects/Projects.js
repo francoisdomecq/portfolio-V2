@@ -20,7 +20,9 @@ function Projects() {
     const [selectedProject, setSelectedProject] = useState(null);
 
     async function selectProject(project) {
-        await setSelectedProject(project);
+        await setTimeout(() => {
+            setSelectedProject(project);
+        }, 1000);
         const element = document.getElementById('SelectedProject');
         element.classList.add('reveal-selected-project', 'project-slide-in');
         const height = element.offsetTop;
@@ -191,7 +193,6 @@ function Projects() {
             />
             <div className="container-projects reveal-on-scroll">
                 <AnimatePresence>
-                    {console.log(filteredProjects)}
                     {filteredProjects.map((project) => {
                         return (
                             <ProjectContainer

@@ -26,8 +26,6 @@ function Filter({
 
     return (
         <div className="filter-technologies-container reveal-on-scroll">
-            <h2 className="title-filter">Filter by </h2>
-
             {technologiesType.map((filter) => {
                 return (
                     <div

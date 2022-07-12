@@ -4,9 +4,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 2.5%;
-    object-fit: cover;
-    border: 0.1em solid aqua;
-    border-radius: 1em;
     padding: 0.8em 1em 0.8em 1em;
     gap: 0 1.5em;
     opacity: 0;
@@ -32,7 +29,7 @@
     text-align: center;
     padding: 0.3em 1em 0.3em 1em;
     border: 0.1em solid aqua;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     color: aqua;
     box-shadow: inset 0 0 0 0;
     transition: all 0.8s ease;
