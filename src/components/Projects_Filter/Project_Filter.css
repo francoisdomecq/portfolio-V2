@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 2.5%;
-    object-fit: cover;
     padding: 0.8em 1em 0.8em 1em;
     gap: 0 1.5em;
     opacity: 0;
@@ -25,7 +24,6 @@
 
 .filter-projects-button {
     display: flex;
-
     width: fit-content;
     text-align: center;
     padding: 0.3em 1em 0.3em 1em;
@@ -37,7 +35,19 @@
     cursor: pointer;
 }
 
+.filter-name {
+    font-size: 1.2em;
+}
+
 .active {
     background-color: aqua;
     color: #1c1c1e;
+}
+
+@media all and (max-width: 480px) {
+    .filter-projects-container {
+        max-width: 80%;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
 }

@@ -11,8 +11,8 @@ function Header() {
     useEffect(() => {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
             if (window.innerWidth > 900) {
-                var currentScrollPos = window.pageYOffset;
                 var navbar = document.getElementById('navbar');
                 if (prevScrollpos > currentScrollPos) {
                     if (currentScrollPos < 100) {
@@ -28,6 +28,23 @@ function Header() {
                     } else {
                         navbar.style.top = '-10%';
                     }
+                }
+                prevScrollpos = currentScrollPos;
+            } else {
+                if (
+                    currentScrollPos >=
+                        document.getElementById('home').getBoundingClientRect()
+                            .height &&
+                    currentScrollPos <
+                        document.getElementById('projects').offsetTop - 50
+                )
+                    document
+                        .getElementById('burger_bar')
+                        .classList.add('is-on-about-page');
+                else {
+                    document
+                        .getElementById('burger_bar')
+                        .classList.remove('is-on-about-page');
                 }
                 prevScrollpos = currentScrollPos;
             }
@@ -87,7 +104,7 @@ function Header() {
                 </li>
             </ul>
             <button className="navbar_burger" onClick={() => handleShowLinks()}>
-                <span className="burger-bar"></span>
+                <span className="burger-bar" id="burger_bar"></span>
             </button>
         </nav>
     );

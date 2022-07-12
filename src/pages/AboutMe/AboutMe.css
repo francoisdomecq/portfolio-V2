@@ -7,12 +7,6 @@
     font-size: 1.5rem;
 }
 
-@media screen and (max-width: 900px) {
-    .BackgroundAboutMe {
-        max-width: 100% !important;
-    }
-}
-
 .title-about-me {
     color: #050b13;
 }
@@ -54,6 +48,7 @@
     width: 30%;
     z-index: 10;
     justify-self: flex-end;
+    align-items: center;
     /* margin-top: 5em; */
 }
 
@@ -71,4 +66,15 @@
     opacity: 1 !important;
 }
 
+@media all and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .about-text-container {
+        width: 80%;
+    }
 
+    .profile-picture {
+        width: 150%;
+    }
+}

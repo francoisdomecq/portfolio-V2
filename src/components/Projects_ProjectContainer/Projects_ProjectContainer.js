@@ -37,7 +37,7 @@ function ProjectContainer({ project, setProject }) {
         <motion.div
             layout
             animate={{ opacity: 1, scale: 1 }}
-            // initial={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 0, scale: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             className="project-container"

@@ -43,3 +43,11 @@
     background-color: aqua;
     color: #1c1c1e;
 }
+
+@media all and (max-width: 480px) {
+    .filter-technologies-container {
+        max-width: 80%;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+}

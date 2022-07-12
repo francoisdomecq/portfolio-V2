@@ -48,7 +48,7 @@ function Filter({
                         }
                         onClick={() => selectFilter(filter)}
                     >
-                        <span>{filter}</span>
+                        <span className='filter-name'>{filter}</span>
                     </div>
                 );
             })}

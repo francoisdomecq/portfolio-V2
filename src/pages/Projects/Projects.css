@@ -184,10 +184,8 @@
     position: relative;
 }
 
-canvas {
-    width: 35%;
-    height: 100%;
-    background-color: #2f2f3a;
-    padding: 1em;
-    border-radius: 1em;
+@media all and (max-width: 900px) {
+    .container-projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

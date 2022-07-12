@@ -36,6 +36,7 @@ function AboutMe() {
                         so I can make mock-ups for my different projects.
                     </p>
                 </div>
+
                 <div className="profile-picture-container">
                     <img
                         className="profile-picture reveal-on-scroll"
