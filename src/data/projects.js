@@ -9,6 +9,7 @@ import Image2 from '../assets/Ensciens/Image2.PNG';
 import Image3 from '../assets/Ensciens/Image3.PNG';
 import Image4 from '../assets/Ensciens/Image4.PNG';
 import Image5 from '../assets/Ensciens/Image5.PNG';
+import Image1Svg from '../assets/Ensciens/Image1.svg';
 
 import { siTypescript } from 'simple-icons/icons';
 import { siJavascript } from 'simple-icons/icons';
@@ -36,7 +37,10 @@ export const projectsData = [
         descriptionEn:
             'Social network within the school to follow student life and be aware of upcoming events',
         languages: ['React Native', 'Typescript', 'C# - ASP .NET Core'],
-        images: [Image1, Image2, Image3, Image4, Image5],
+        carousel: {
+            images: [Image1,Image1Svg],
+            description: ['image1', 'image2', 'image3', 'image4', 'image5'],
+        },
         descriptionLongueEn: (
             <p>
                 The aim of this project was to create a mobile application. The
@@ -65,7 +69,10 @@ export const projectsData = [
         descriptionEn:
             'Web application to play the game Rap Game from the youtube show of the same name',
         languages: ['React', 'Node JS', 'Javascript'],
-        images: [Image1, Image2, Image3, Image4, Image5],
+        carousel: {
+            images: [Image1,Image1Svg],
+            description: ['image1', 'image2', 'image3', 'image4', 'image5'],
+        },
         descriptionLongueEn: '',
         technologiesEn: [
             // siReact,
@@ -85,7 +92,10 @@ export const projectsData = [
         descriptionEn:
             'Mobile application promoting the exploration of cities in the manner of world exploration in video games',
         languages: ['React Native', 'Typescript'],
-        images: [Image1, Image2, Image3, Image4, Image5],
+        carousel: {
+            images: [Image1,Image1Svg],
+            description: ['image1', 'image2', 'image3', 'image4', 'image5'],
+        },
         descriptionLongueEn: '',
         // technologiesEn: [siReact, siTypescript, siNodedotjs, siExpress],
         rapportProjet: '',
@@ -97,7 +107,10 @@ export const projectsData = [
         descriptionEn:
             'RogueLike game, programmed as a console application, where the player evolves in a pirate universe',
         languages: ['C#'],
-        images: [Image1, Image2, Image3, Image4, Image5],
+        carousel: {
+            images: [Image1,Image1Svg],
+            description: ['image1', 'image2', 'image3', 'image4', 'image5'],
+        },
         descriptionLongueEn: '',
         // technologiesEn: ['csharp'],
         rapportProjet: '',
@@ -108,7 +121,10 @@ export const projectsData = [
         src: Portfolio,
         descriptionEn: 'My personal portfolio website',
         languages: ['React', 'Javascript'],
-        images: [],
+        carousel: {
+            images: [Image1,Image1Svg],
+            description: ['image1', 'image2', 'image3', 'image4', 'image5'],
+        },
         descriptionLongueEn: '',
         technologiesEn: '',
         rapportProjet: '',

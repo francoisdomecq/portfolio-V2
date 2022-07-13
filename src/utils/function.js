@@ -5,6 +5,7 @@ export const renderCustomIcon = (icon, bg) => {
         icon,
         size: 64,
         bgHex: bg,
+        bg: bg,
         aProps: {
             href: undefined,
             target: undefined,

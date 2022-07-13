@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 import './Project_Carousel.css';
-
+import CaretRight from '../../assets/caret-right.svg';
+import CaretLeft from '../../assets/caret-left.svg';
 export const CarouselItem = ({ children, width }) => {
     return (
         <div className="carousel-item" style={{ width: width }}>
@@ -11,7 +12,7 @@ export const CarouselItem = ({ children, width }) => {
     );
 };
 
-function Carousel({ children }) {
+function Carousel({ children, descriptions }) {
     const [paused, setPaused] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
     const updateIndex = (newIndex) => {
@@ -50,12 +51,18 @@ function Carousel({ children }) {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
         >
+            {' '}
+            {console.log(descriptions)}
             <div className="inner-bg">
                 <button
                     onClick={() => updateIndex(activeIndex - 1)}
                     className="btn-prev"
                 >
-                    <span className="caret">&#60;</span>
+                    <img
+                        className="caret"
+                        src={CaretLeft}
+                        alt="caret-previous"
+                    />
                 </button>
                 <div
                     className="inner"
@@ -69,8 +76,11 @@ function Carousel({ children }) {
                     onClick={() => updateIndex(activeIndex + 1)}
                     className="btn-next"
                 >
-                    <span className="caret">&#62;</span>
+                    <img className="caret" src={CaretRight} alt="caret-next" />
                 </button>
+            </div>
+            <div className="description-image">
+                <p style={{ color: 'white' }}>{descriptions[activeIndex]}</p>
             </div>
             <div className="indicators">
                 {React.Children.map(children, (child, index) => {

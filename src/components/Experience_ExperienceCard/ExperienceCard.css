@@ -1,0 +1,60 @@
+.experience-card-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.experience-card-container:nth-child(even) {
+    flex-direction: row;
+}
+
+.experience-card-container:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.experience-card-informations {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card-description {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    /* width: 75%; */
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #2f2f3a;
+    color: white;
+    z-index: 50;
+}
+
+.experience-card-title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+.experience-card-container:nth-child(odd) .experience-card-title,
+.experience-card-container:nth-child(odd) .experience-card-company,
+.experience-card-container:nth-child(odd) .experience-card-technologies {
+    align-self: flex-end;
+}
+
+.experience-card-image {
+    display: flex;
+    position: relative;
+}
+
+.experience-card-container:nth-child(even) .experience-card-image {
+    left: -30px;
+}
+
+.experience-card-container:nth-child(odd) .experience-card-image {
+    left: 30px;
+}
+
+.experience-image {
+    max-width: 500px;
+    border-radius: 0.5em;
+}

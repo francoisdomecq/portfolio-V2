@@ -52,8 +52,14 @@ function Projects() {
                 </div>
                 <div className="page-project-content-container">
                     <div className="page-project-slider-container">
-                        <Carousel>
-                            {selectedProject.images.map((image) => {
+                        {console.log(
+                            'projectjs:',
+                            selectedProject.carousel.description
+                        )}
+                        <Carousel
+                            descriptions={selectedProject.carousel.description}
+                        >
+                            {selectedProject.carousel.images.map((image) => {
                                 return (
                                     <CarouselItem key={image}>
                                         <img

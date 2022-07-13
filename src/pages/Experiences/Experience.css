@@ -18,3 +18,11 @@
     transform: translateX(0);
     opacity: 1;
 }
+
+.experiences-container {
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    gap: 3em 0;
+}

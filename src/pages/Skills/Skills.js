@@ -5,7 +5,7 @@ import './Skills.css';
 import { skillsData } from '../../data/skillsData';
 
 function Skills() {
-    const colour = '#08fdd8';
+    const colour = '#fff';
     const cloudIcons = skillsData.map((i) => renderCustomIcon(i, colour));
 
     return (
@@ -40,7 +40,7 @@ function Skills() {
                         }}
                         className="skills-canvas reveal-on-scroll"
                         options={{
-                            outlineColour: 'red',
+                            outlineColour: 'aqua',
                             clickToFront: 500,
 
                             fadeIn: 200,
