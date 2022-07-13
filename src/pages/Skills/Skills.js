@@ -1,12 +1,9 @@
-import { useEffect, useState } from 'react';
 import { Cloud, renderSimpleIcon } from 'react-icon-cloud';
 
 import './Skills.css';
 import { skillsData } from '../../data/skillsData';
 
 function Skills() {
-    const [selectedIcon, setSelectedIcon] = useState('');
-
     function onClickIcon(e, icon) {
         e.preventDefault();
     }
@@ -34,7 +31,7 @@ function Skills() {
     const cloudIcons = skillsData.map((i) => renderCustomIcon(i, colour));
 
     return (
-        <div className="skills-section" id="skills">
+        <section className="skills-section" id="skills">
             <h1 className="title-skills reveal-on-scroll">My skills</h1>
             <div className="skills-container">
                 <div className="skills-text">
@@ -85,31 +82,14 @@ function Skills() {
                     </Cloud>
                 </div>
             </div>
-        </div>
-        // <div className="skills-section" id="skills">
-        //     <h1 className="title-skills reveal-on-scroll">My skills</h1>
-        //     <Filter
-        //         selectedFilter={selectedFilter}
-        //         setSelectedFilter={setSelectedFilter}
-        //         technologies={technologies}
-        //         setFilteredTechnologies={setFilterTechnologies}
-        //     />
-        //     <div className="skills-container reveal-on-scroll">
-        //         <AnimatePresence>
-        //             {filteredTechnologies.map((technology) => {
-        //                 return (
-        //                     <SkillCard
-        //                         key={technology.name}
-        //                         name={technology.name}
-        //                         img={technology.img}
-        //                         level={technology.level}
-        //                         info={technology.info}
-        //                     />
-        //                 );
-        //             })}
-        //         </AnimatePresence>
-        //     </div>
-        // </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#fff"
+                    fill-opacity="1"
+                    d="M0,256L1440,192L1440,320L0,320Z"
+                ></path>
+            </svg>
+        </section>
     );
 }
 

@@ -90,12 +90,21 @@ function Header() {
                         href="#skills"
                         onClick={() => setShowLinks()}
                     >
-                        My skills
+                        Skills
                     </a>
                 </li>
                 <li className="navbar_item slideInDown-5">
                     <a
                         className="navbar_link navbar_link5 hover-underline-animation"
+                        href="#experience"
+                        onClick={() => setShowLinks()}
+                    >
+                        Experience
+                    </a>
+                </li>
+                <li className="navbar_item slideInDown-6">
+                    <a
+                        className="navbar_link navbar_link6 hover-underline-animation"
                         href="#contact"
                         onClick={() => setShowLinks()}
                     >

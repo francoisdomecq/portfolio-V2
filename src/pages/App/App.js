@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 import AboutMe from '../AboutMe/AboutMe';
 import ContactMe from '../ContactMe/ContactMe';
+import Experience from '../Experiences/Experience';
 import Home from '../Home/Home';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
@@ -43,6 +44,7 @@ function App() {
             <AboutMe />
             <Projects />
             <Skills />
+            <Experience />
             <ContactMe />
         </div>
     );

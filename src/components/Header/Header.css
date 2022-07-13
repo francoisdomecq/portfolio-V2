@@ -65,6 +65,10 @@
     animation: slideDown ease 0.3s forwards 0.4s;
 }
 
+.navbar_link6 {
+    animation: slideDown ease 0.3s forwards 0.5s;
+}
+
 .navbar_burger {
     display: none;
     width: 40px;
@@ -228,5 +232,9 @@
     }
     .show-nav .slideInDown-5 {
         transition: all 1.4s ease-out;
+    }
+
+    .show-nav .slideInDown-6 {
+        transition: all 1.5s ease-out;
     }
 }
