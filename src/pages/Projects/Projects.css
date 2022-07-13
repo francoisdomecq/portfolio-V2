@@ -95,21 +95,21 @@
 .page-project-content-container {
     display: flex;
     width: 100%;
-    height: 600px;
     gap: 1em 1em;
+    margin-top: 3em;
 }
 
 .page-project-slider-container {
     display: flex;
     flex-direction: column;
-    max-width: 55%;
+    width: 55%;
 }
 
 .page-project-description-container {
     display: flex;
     max-width: 45%;
     flex-direction: column;
-    padding: 1em;
+
     gap: 1em 0;
 }
 
@@ -180,6 +180,10 @@
 
 .page-project-icon {
     position: relative;
+}
+
+.img-caroussel {
+    width: 100%;
 }
 
 @media all and (max-width: 900px) {

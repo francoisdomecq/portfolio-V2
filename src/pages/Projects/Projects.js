@@ -1,9 +1,12 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TweenLite, Linear, TimelineLite } from 'gsap/gsap-core';
+import { AnimatePresence } from 'framer-motion';
 
 import ProjectContainer from '../../components/Projects_ProjectContainer/Projects_ProjectContainer';
 import Filter from '../../components/Projects_Filter/Project_Filter';
+import Carousel, {
+    CarouselItem,
+} from '../../components/Project_Carousel/Project_Carousel';
 
 import './Projects.css';
 
@@ -11,13 +14,26 @@ import { projectsData } from '../../data/projects.js';
 import GitHubIcon from '../../assets/githubLight.svg';
 import reactIcon from '../../assets/React.svg';
 import TypeScript from '../../assets/typescript.svg';
-import gsap from 'gsap';
+
+import Ensciens1 from '../../assets/Ensciens/Image1.PNG';
+
+const images = [Ensciens1, Ensciens1, Ensciens1];
 
 function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('All');
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const updateIndex = (length, newIndex) => {
+        if (newIndex < 0) {
+            newIndex = length - 1;
+        } else if (newIndex >= length) {
+            newIndex = 0;
+        }
+        setActiveIndex(newIndex);
+    };
 
     async function selectProject(project) {
         await setSelectedProject(project);
@@ -42,82 +58,44 @@ function Projects() {
     useEffect(() => {
         setProjects(projectsData);
         setFilteredProjects(projectsData);
-        // if (selectedProject) {
-        //     moveImages();
-        // }
     }, [selectedProject]);
-
-    function random(max) {
-        return Math.random() * max;
-    }
-
-    function moveImages() {
-        var images = document.getElementsByClassName('page-project-icon');
-        var container = document.getElementById('page-project-technologies');
-        container.addEventListener('mouseenter', () => {
-            for (let i = 0; i < images.length; i++) {
-                console.log(
-                    'container',
-                    container.getBoundingClientRect().width,
-                    container.getBoundingClientRect().height
-                );
-                console.log('images', images[i].clientHeight);
-                const position = images[i].offsetTop;
-                images[i].animate(
-                    {
-                        top:
-                            random(
-                                container.getBoundingClientRect().height / 2
-                            ) -
-                            images[i].getBoundingClientRect().height +
-                            'px',
-                        left:
-                            random(
-                                container.getBoundingClientRect().width / 2
-                            ) -
-                            images[i].getBoundingClientRect().width +
-                            'px',
-                    },
-                    {
-                        duration: 5000,
-                        iterations: Infinity,
-                    }
-                );
-            }
-        });
-
-        // var object = document.getElementsByClassName('page-project-icon');
-        // console.log(object);
-        // const element = document.getElementById('page-project-technologies');
-
-        // console.log(element);
-        // for (let i = 0; i < object.length; i++) {
-        //     var x = Math.floor(Math.random() * element.clientWidth);
-
-        //     var y = Math.floor(Math.random() * element.clientHeight);
-        //     object[i].style.top =
-        //         object[i].getBoundingClientRect().y + y + 'px';
-        //     object[i].style.left = x + 'px';
-        // }
-    }
 
     return selectedProject ? (
         <section className="page-projects">
             <section className="page-project " id="SelectedProject">
                 <div className="page-project-back-button">
                     <span onClick={() => resetProject()}>&#8249; Go back</span>
-                    {/* <p style={{ color: 'white' }}>{selectedProject.name}</p> */}
+                    <p style={{ color: 'white' }}>{selectedProject.name}</p>
                 </div>
                 <div className="page-project-content-container">
                     <div className="page-project-slider-container">
-                        <p>aha</p>
+                        <Carousel
+                            setActiveIndex={setActiveIndex}
+                            activeIndex={activeIndex}
+                        >
+                            {images.map((image) => {
+                                return (
+                                    <CarouselItem
+                                        setActiveIndex={setActiveIndex}
+                                        activeIndex={activeIndex}
+                                        length={images.length}
+                                    >
+                                        <img
+                                            className="img-caroussel"
+                                            src={image}
+                                            alt="ensciens"
+                                        />
+                                    </CarouselItem>
+                                );
+                            })}
+                        </Carousel>
                     </div>
 
                     <div className="page-project-description-container">
                         <div className="page-project-description">
                             <h1 className="page-project-title">Description</h1>
                             <p className="page-project-description-text ">
-                                {selectedProject.descritptionLongueFr}
+                                {selectedProject.descriptionLongueEn}
                             </p>
                         </div>
                         <div className="page-project-bottom-container">
@@ -153,7 +131,6 @@ function Projects() {
                             <div
                                 className="page-project-technologies"
                                 id="page-project-technologies"
-                                onClick={() => moveImages()}
                             >
                                 {/* <div className="icons-container"> */}
                                 <img
