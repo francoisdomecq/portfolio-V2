@@ -12,30 +12,16 @@ import './Projects.css';
 
 import { projectsData } from '../../data/projects.js';
 import GitHubIcon from '../../assets/githubLight.svg';
-import reactIcon from '../../assets/React.svg';
-import TypeScript from '../../assets/typescript.svg';
-
-import Ensciens1 from '../../assets/Ensciens/Image1.PNG';
-
-const images = [Ensciens1, Ensciens1, Ensciens1];
 
 function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('All');
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const updateIndex = (length, newIndex) => {
-        if (newIndex < 0) {
-            newIndex = length - 1;
-        } else if (newIndex >= length) {
-            newIndex = 0;
-        }
-        setActiveIndex(newIndex);
-    };
+    const [icons, setIcons] = useState([]);
 
     async function selectProject(project) {
+        await setIcons(project.technologiesEn);
         await setSelectedProject(project);
 
         const element = document.getElementById('SelectedProject');
@@ -50,9 +36,6 @@ function Projects() {
         for (let i = 0; i < element.length; i++) {
             element[i].classList.toggle('active-on-scroll');
         }
-        const project = document.getElementById('SelectedProject');
-        await project.classList.remove('project-slide-in');
-        await project.classList.add('project-slide-out');
     }
 
     useEffect(() => {
@@ -69,17 +52,10 @@ function Projects() {
                 </div>
                 <div className="page-project-content-container">
                     <div className="page-project-slider-container">
-                        <Carousel
-                            setActiveIndex={setActiveIndex}
-                            activeIndex={activeIndex}
-                        >
-                            {images.map((image) => {
+                        <Carousel>
+                            {selectedProject.images.map((image) => {
                                 return (
-                                    <CarouselItem
-                                        setActiveIndex={setActiveIndex}
-                                        activeIndex={activeIndex}
-                                        length={images.length}
-                                    >
+                                    <CarouselItem key={image}>
                                         <img
                                             className="img-caroussel"
                                             src={image}
@@ -131,27 +107,7 @@ function Projects() {
                             <div
                                 className="page-project-technologies"
                                 id="page-project-technologies"
-                            >
-                                {/* <div className="icons-container"> */}
-                                <img
-                                    className="page-project-icon "
-                                    src={TypeScript}
-                                />
-                                <img
-                                    className="page-project-icon "
-                                    src={reactIcon}
-                                />
-                                <img
-                                    className="page-project-icon "
-                                    src={TypeScript}
-                                />
-                                <img
-                                    className="page-project-icon "
-                                    src={reactIcon}
-                                />
-                                {/* </div> */}
-                            </div>
-                            {/*Ou alors truc 3d qui bouge avec les technologies */}
+                            ></div>
                         </div>
                     </div>
                 </div>

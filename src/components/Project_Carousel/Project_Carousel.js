@@ -11,9 +11,9 @@ export const CarouselItem = ({ children, width }) => {
     );
 };
 
-function Carousel({ children, setActiveIndex, activeIndex }) {
+function Carousel({ children }) {
     const [paused, setPaused] = useState(false);
-
+    const [activeIndex, setActiveIndex] = useState(0);
     const updateIndex = (newIndex) => {
         if (newIndex < 0) {
             newIndex = React.Children.count(children) - 1;

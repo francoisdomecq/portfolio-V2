@@ -10,6 +10,25 @@ import Image3 from '../assets/Ensciens/Image3.PNG';
 import Image4 from '../assets/Ensciens/Image4.PNG';
 import Image5 from '../assets/Ensciens/Image5.PNG';
 
+import { siTypescript } from 'simple-icons/icons';
+import { siJavascript } from 'simple-icons/icons';
+import { siGit } from 'simple-icons/icons';
+import { siReact } from 'simple-icons/icons';
+import { siNodedotjs } from 'simple-icons/icons';
+import { siMongodb } from 'simple-icons/icons';
+import { siAzuredevops } from 'simple-icons/icons';
+import { siAdobexd } from 'simple-icons/icons';
+import { siFigma } from 'simple-icons/icons';
+import { siCsharp } from 'simple-icons/icons';
+import { siCss3 } from 'simple-icons/icons';
+import { siExpress } from 'simple-icons/icons';
+import { siHtml5 } from 'simple-icons/icons';
+import { siPython } from 'simple-icons/icons';
+import { siDotnet } from 'simple-icons/icons';
+import { siKeras } from 'simple-icons/icons';
+import { siJest } from 'simple-icons/icons';
+import { siBootstrap } from 'simple-icons/icons';
+
 export const projectsData = [
     {
         name: 'Encsiens',
@@ -29,7 +48,14 @@ export const projectsData = [
                 kept up to date with the school's student life.
             </p>
         ),
-        technologiesEn: '',
+        technologiesEn: [
+            'React',
+            // siTypescript,
+            // siCsharp,
+            // siDotnet,
+            // siAzuredevops,
+            // siFigma,
+        ],
         rapportProjet: './Bernard_Domecq_MOBI_Projet.pdf',
         github: '',
     },
@@ -41,7 +67,15 @@ export const projectsData = [
         languages: ['React', 'Node JS', 'Javascript'],
         images: [Image1, Image2, Image3, Image4, Image5],
         descriptionLongueEn: '',
-        technologiesEn: '',
+        technologiesEn: [
+            // siReact,
+            // siNodedotjs,
+            // siJavascript,
+            // siExpress,
+            // siHtml5,
+            // siCss3,
+            // siFigma,
+        ],
         rapportProjet: '',
         github: 'https://github.com/francoisdomecq/Rap-Jeu',
     },
@@ -53,7 +87,7 @@ export const projectsData = [
         languages: ['React Native', 'Typescript'],
         images: [Image1, Image2, Image3, Image4, Image5],
         descriptionLongueEn: '',
-        technologiesEn: '',
+        // technologiesEn: [siReact, siTypescript, siNodedotjs, siExpress],
         rapportProjet: '',
         github: '',
     },
@@ -65,7 +99,7 @@ export const projectsData = [
         languages: ['C#'],
         images: [Image1, Image2, Image3, Image4, Image5],
         descriptionLongueEn: '',
-        technologiesEn: '',
+        // technologiesEn: ['csharp'],
         rapportProjet: '',
         github: 'https://github.com/francoisdomecq/RogueLike_Domecq_Leger',
     },

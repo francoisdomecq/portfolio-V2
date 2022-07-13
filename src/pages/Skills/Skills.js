@@ -1,32 +1,10 @@
-import { Cloud, renderSimpleIcon } from 'react-icon-cloud';
+import { Cloud } from 'react-icon-cloud';
+import { renderCustomIcon } from '../../utils/function';
 
 import './Skills.css';
 import { skillsData } from '../../data/skillsData';
 
 function Skills() {
-    function onClickIcon(e, icon) {
-        e.preventDefault();
-    }
-
-    function displayIconName(icon) {
-        console.log(icon.title);
-    }
-
-    const renderCustomIcon = (icon, bg) => {
-        return renderSimpleIcon({
-            icon,
-            size: 64,
-            bgHex: bg,
-            aProps: {
-                href: undefined,
-                target: undefined,
-                rel: undefined,
-                onClick: (e) => onClickIcon(e, icon),
-                onMouseOver: () => displayIconName(icon),
-            },
-        });
-    };
-
     const colour = '#08fdd8';
     const cloudIcons = skillsData.map((i) => renderCustomIcon(i, colour));
 
