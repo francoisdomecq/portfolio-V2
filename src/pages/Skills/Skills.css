@@ -21,18 +21,13 @@
     opacity: 1;
 }
 
-.skills-container {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    color: #fff;
+.skills-canvas {
     opacity: 0;
     transform: translateY(100px);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in;
 }
 
-.skills-container.active-on-scroll {
+.skills-canvas.active-on-scroll {
     opacity: 1;
     transform: translateY(0);
 }
@@ -41,4 +36,23 @@
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1em;
+    gap: 0 10em;
+}
+
+.skills-text {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 1em;
+    padding-top: 3em;
+    color: white;
+    gap: 1.5em;
+    align-self: flex-start;
 }
