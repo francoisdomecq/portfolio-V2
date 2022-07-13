@@ -15,6 +15,7 @@ import { siPython } from 'simple-icons/icons';
 import { siDotnet } from 'simple-icons/icons';
 import { siKeras } from 'simple-icons/icons';
 import { siJest } from 'simple-icons/icons';
+import { siBootstrap } from 'simple-icons/icons';
 
 export const skillsData = [
     siTypescript,
@@ -34,4 +35,5 @@ export const skillsData = [
     siDotnet,
     siKeras,
     siJest,
+    siBootstrap,
 ];
