@@ -46,16 +46,19 @@ function Projects() {
     return selectedProject ? (
         <section className="page-projects">
             <section className="page-project " id="SelectedProject">
-                <div className="page-project-back-button">
-                    <span onClick={() => resetProject()}>&#8249; Go back</span>
-                    <p style={{ color: 'white' }}>{selectedProject.name}</p>
+                <div className="page-project-top-container">
+                    <div className="page-project-back-button">
+                        <span onClick={() => resetProject()}>
+                            &#8249; Go back
+                        </span>
+                    </div>
+                    <p className="page-project-project-title">
+                        {selectedProject.name}
+                    </p>
                 </div>
+
                 <div className="page-project-content-container">
                     <div className="page-project-slider-container">
-                        {console.log(
-                            'projectjs:',
-                            selectedProject.carousel.description
-                        )}
                         <Carousel
                             descriptions={selectedProject.carousel.description}
                         >

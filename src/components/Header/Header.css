@@ -131,7 +131,13 @@
         border-top-left-radius: 1em;
         border-bottom-left-radius: 1em;
         padding: 2rem;
-        background-color: #000;
+        /* background-color: #000; */
+        background: radial-gradient(
+            ellipse at bottom,
+            #0d1d31 0%,
+            #0c0d13 100%
+        );
+        opacity: 0.99;
         transition: all 0.8s ease-out;
     }
 
@@ -144,7 +150,7 @@
     .navbar_link {
         display: block;
         padding: 1.5rem;
-        font-size: 5vw;
+        font-size:1.5em;
     }
 
     .navbar_burger {
@@ -236,5 +242,10 @@
 
     .show-nav .slideInDown-6 {
         transition: all 1.5s ease-out;
+    }
+    .hover-underline-animation:after {
+        height: 2px;
+        bottom: -10px;
+        left: 0;
     }
 }

@@ -23,15 +23,8 @@ function Home() {
         <section className="Home  " id="home">
             <Name />
 
-            <div
-                id="mouseCoord"
-                style={{ position: 'absolute', right: 0, bottom: 0 }}
-            >
-                <span id="mouseX"></span>
-                <span id="mouseY"></span>
-            </div>
-            <div className="ContainerDescription">
-                <p className="Description">
+            <div className="container-short-description">
+                <p className="description">
                     I am a french engineering student in Cognitive sciences at
                     the{' '}
                     <a

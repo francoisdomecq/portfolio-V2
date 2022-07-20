@@ -31,12 +31,6 @@
     transform: translateY(0);
 }
 
-@media all and (max-width: 500px) {
-    .skills-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .skills-container {
     display: flex;
     flex-direction: row;
@@ -54,4 +48,10 @@
     color: white;
     gap: 1.5em;
     align-self: flex-start;
+}
+
+@media all and (max-width: 500px) {
+    .skills-container {
+        flex-direction: column;
+    }
 }
