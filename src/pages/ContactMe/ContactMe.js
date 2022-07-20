@@ -3,11 +3,10 @@ import './Contact.css';
 
 function ContactMe() {
     return (
-        <div className="container-contact" id="contact">
-            <div>
-                <p>hi</p>
-            </div>
-        </div>
+        <section className="container-contact" id="contact">
+            <h1 className="title-contact">Contact me !</h1>
+            {/*Linkedin Github Gmail  */}
+        </section>
     );
 }
 

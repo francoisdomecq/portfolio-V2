@@ -23,7 +23,6 @@ function Filter({
                 const languages = projects[i].languages;
                 for (let j = 0; j < languages.length; j++) {
                     if (languages[j].includes(selectedFilter)) {
-                        console.log(projects[i].name, languages[j]);
                         newFilter = projects[i];
                     }
                 }
@@ -48,7 +47,7 @@ function Filter({
                         }
                         onClick={() => selectFilter(filter)}
                     >
-                        <span className='filter-name'>{filter}</span>
+                        <span className="filter-name">{filter}</span>
                     </div>
                 );
             })}

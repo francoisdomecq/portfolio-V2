@@ -4,6 +4,7 @@
     min-width: 100%;
     min-height: 100vh;
     padding: 0;
+    background-color: #20202a;
 }
 
 .section-experience-title {
@@ -12,6 +13,7 @@
     opacity: 0;
     transform: translateY(100px);
     transition: all 0.5s ease;
+    color: white;
 }
 
 .section-experience-title.active-on-scroll {
@@ -25,4 +27,5 @@
     grid-template-columns: repeat(1, 1fr);
     width: 70%;
     gap: 3em 0;
+    margin-top:5em;
 }

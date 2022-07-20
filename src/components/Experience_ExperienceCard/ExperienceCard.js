@@ -11,7 +11,7 @@ function ExperienceCard({
     siteLink,
 }) {
     return (
-        <div className="experience-card-container">
+        <div className="experience-card-container reveal-on-scroll">
             <div className="experience-card-informations">
                 <div className="experience-card-title">
                     <p>{duration}</p> .<p>{job}</p>

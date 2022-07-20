@@ -11,6 +11,8 @@ import Image4 from '../assets/Ensciens/Image4.PNG';
 import Image5 from '../assets/Ensciens/Image5.PNG';
 import Image1Svg from '../assets/Ensciens/Image1.svg';
 
+import BaroudeursImg1 from '../assets/Baroudeurs/Image1.svg';
+import BaroudeursImg22 from '../assets/Baroudeurs/Image1.png';
 import { siTypescript } from 'simple-icons/icons';
 import { siJavascript } from 'simple-icons/icons';
 import { siGit } from 'simple-icons/icons';
@@ -38,7 +40,7 @@ export const projectsData = [
             'Social network within the school to follow student life and be aware of upcoming events',
         languages: ['React Native', 'Typescript', 'C# - ASP .NET Core'],
         carousel: {
-            images: [Image1,Image1Svg],
+            images: [Image1, Image1Svg],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: (
@@ -70,7 +72,7 @@ export const projectsData = [
             'Web application to play the game Rap Game from the youtube show of the same name',
         languages: ['React', 'Node JS', 'Javascript'],
         carousel: {
-            images: [Image1,Image1Svg],
+            images: [Image1, Image1Svg],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: '',
@@ -93,7 +95,7 @@ export const projectsData = [
             'Mobile application promoting the exploration of cities in the manner of world exploration in video games',
         languages: ['React Native', 'Typescript'],
         carousel: {
-            images: [Image1,Image1Svg],
+            images: [BaroudeursImg1, BaroudeursImg22],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: '',
@@ -108,7 +110,7 @@ export const projectsData = [
             'RogueLike game, programmed as a console application, where the player evolves in a pirate universe',
         languages: ['C#'],
         carousel: {
-            images: [Image1,Image1Svg],
+            images: [Image1, Image1Svg],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: '',
@@ -122,7 +124,7 @@ export const projectsData = [
         descriptionEn: 'My personal portfolio website',
         languages: ['React', 'Javascript'],
         carousel: {
-            images: [Image1,Image1Svg],
+            images: [Image1, Image1Svg],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: '',

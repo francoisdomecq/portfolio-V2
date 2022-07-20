@@ -4,12 +4,12 @@
     align-items: center;
     min-height: 100vh;
     max-width: 100%;
-    background: #191919;
+    background: #d1d7db;
 }
 
 .title-skills {
     font-size: 2rem;
-    color: white;
+    color: #050b13;
     opacity: 0;
     transform: translateY(100px);
     transition: all 0.5s ease;

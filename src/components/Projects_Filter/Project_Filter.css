@@ -35,6 +35,15 @@
     cursor: pointer;
 }
 
+.filter-projects-button:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+}
+
+.filter-projects-button:hover.active {
+    background-color: aqua;
+    color: #1c1c1e;
+}
+
 .filter-name {
     font-size: 1.2em;
 }

@@ -2,6 +2,14 @@
     display: flex;
     align-items: center;
     width: 100%;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-in-out;
+}
+
+.experience-card-container.active-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .experience-card-container:nth-child(even) {
@@ -15,6 +23,7 @@
 .experience-card-informations {
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
 }
 
 .experience-card-description {
@@ -27,12 +36,13 @@
     background-color: #2f2f3a;
     color: white;
     z-index: 50;
+    box-shadow: 0px 5px 5px 0px #000;
 }
 
 .experience-card-title {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1em;
+    color: white;
 }
 
 .experience-card-container:nth-child(odd) .experience-card-title,
@@ -47,14 +57,25 @@
 }
 
 .experience-card-container:nth-child(even) .experience-card-image {
-    left: -30px;
+    left: -60px;
 }
 
 .experience-card-container:nth-child(odd) .experience-card-image {
-    left: 30px;
+    left: 60px;
 }
 
 .experience-image {
     max-width: 500px;
     border-radius: 0.5em;
+}
+
+.experience-card-company {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.experience-card-technologies {
+    color: white;
 }
