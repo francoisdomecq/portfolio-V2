@@ -11,7 +11,7 @@
 .container-short-description {
     display: flex;
     margin-left: 12%;
-    width: 50%;
+    width: 41%;
     z-index: 15;
 }
 
@@ -43,8 +43,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3em;
-    width: 30%;
+    width: fit-content;
+    padding: 1em;
     border-radius: 1.2rem;
     background-color: transparent;
     color: aqua;
@@ -53,7 +53,11 @@
     box-shadow: inset 0px 0px 0px #2f3b47;
     opacity: 0;
     animation: FadeIn ease-in 0.3s forwards 0.9s;
-    padding: 1em;
+}
+
+.button-scroll-about-me-text {
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .button-scroll-about-me:hover {
@@ -107,6 +111,108 @@ a {
     height: 100%;
 }
 
+.container-name {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 15%;
+    margin-top: 8%;
+    margin-left: 12%;
+    margin-bottom: 2%;
+}
+
+.name {
+    display: flex;
+    color: white;
+    opacity: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.name.first {
+    animation: FadeIn ease-in 0.3s forwards 0.5s;
+}
+
+.name.second {
+    animation: FadeIn ease-in 0.3s forwards 0.6s;
+}
+
+.name.third {
+    animation: FadeIn ease-in 0.3s forwards 0.7s;
+}
+
+@keyframes FadeIn {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+span.bouncing-letter {
+    display: -moz-inline-stack;
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+span.bouncing {
+    display: -moz-inline-stack;
+    display: inline-block;
+    animation: rubberBand 800ms alternate ease-out;
+    color: aqua;
+}
+
+@keyframes rubberBand {
+    0% {
+        transform: scaleX(1);
+    }
+    40% {
+        transform: scaleX(1.06) scaleY(0.9);
+    }
+    55% {
+        transform: scaleX(0.95) scaleY(1.06);
+    }
+    65% {
+        transform: scaleX(1.09) scaleY(0.85);
+    }
+    75% {
+        transform: scaleX(0.9) scaleY(1);
+    }
+    90% {
+        transform: scaleX(1.05) scaleY(0.95);
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
+
+@media screen and (max-width: 468px) {
+    .container-name {
+        margin-top: 70%;
+        margin-bottom: 10%;
+        margin-left: 6%;
+    }
+    .bouncing-letter {
+        font-size: 2rem !important;
+        line-height: 3rem;
+    }
+}
+
 @media screen and (max-width: 468px) {
     .container-short-description {
         width: 87%;
@@ -122,5 +228,8 @@ a {
         right: auto;
         width: 40%;
         animation: FadeIn ease-in 0.3s forwards 0.3s;
+    }
+    .button-scroll-about-me-text {
+        font-size: 1rem;
     }
 }

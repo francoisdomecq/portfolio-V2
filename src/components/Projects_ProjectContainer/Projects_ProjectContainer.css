@@ -3,8 +3,6 @@
 .project-container {
     display: flex;
     flex-direction: column;
-    min-width: 100%;
-    min-height: 100%;
     background-color: #2c2c3a;
     box-shadow: 0px 5px 5px 0px #000;
     border-radius: 1em;
@@ -12,8 +10,6 @@
 
 .project-container-top {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-direction: column;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
@@ -49,6 +45,7 @@
 }
 
 .project-container-top:hover {
+    display: flex;
     cursor: pointer;
     background-color: #424250;
 }
@@ -56,20 +53,24 @@
 .project-image {
     display: flex;
     align-self: center;
-    width: 35%;
+    width: 40%;
 }
 
 .project-name {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-left: 5%;
     color: white;
     font-family: 'Hauora Sans';
 }
 
 .project-description {
-    font-size: 1em;
-    margin-left: 2%;
-    margin-right: 2%;
+    display: flex;
+    width: 95%;
+    text-align: left;
+    font-size: 1.3em;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     color: white;
     font-family: 'Hauora Sans';
 }
@@ -87,8 +88,7 @@
     align-items: center;
     justify-content: center;
     border: 0.09rem solid white;
-    text-align: center;
-    padding: 1em;
+    padding: 0.5em;
     border-radius: 1em;
     margin-left: 1%;
 }
@@ -96,10 +96,8 @@
 .project-technology {
     color: white;
     font-family: 'Hauora Sans';
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 500;
 }
 
-.page-project-icon {
-    height: 3rem;
-}
+

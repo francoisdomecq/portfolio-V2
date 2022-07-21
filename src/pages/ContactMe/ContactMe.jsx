@@ -24,7 +24,7 @@ function ContactMe() {
     });
     return (
         <section className="container-contact" id="contact">
-            <h1 className="title-contact">Contact me !</h1>
+            <h1 className="title-contact reveal-on-scroll">Contact me !</h1>
             {/*Linkedin Github Gmail  */}
             <div className="contact-cards-container">
                 <ContactCard

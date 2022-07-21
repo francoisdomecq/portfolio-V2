@@ -4,7 +4,7 @@ function ContactCard({ icon, link, text, size, type, clickMail }) {
     return type === 'mail' ? (
         <>
             <div
-                className="card-link"
+                className="card-link reveal-on-scroll"
                 style={{ '--size': `${size}px`, cursor: 'pointer' }}
                 onClick={() => clickMail()}
             >
@@ -16,7 +16,7 @@ function ContactCard({ icon, link, text, size, type, clickMail }) {
         </>
     ) : (
         <a
-            className="card-link"
+            className="card-link reveal-on-scroll"
             href={link}
             style={{ '--size': `${size}px` }}
             target="_blank"

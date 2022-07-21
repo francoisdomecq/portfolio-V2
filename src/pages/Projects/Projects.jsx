@@ -133,7 +133,7 @@ function Projects() {
                 setFilteredProjects={setFilteredProjects}
             />
             <div className="container-projects reveal-on-scroll">
-                <AnimatePresence>
+                <AnimatePresence presenceAffectsLayout={true}>
                     {filteredProjects.map((project) => {
                         return (
                             <ProjectContainer

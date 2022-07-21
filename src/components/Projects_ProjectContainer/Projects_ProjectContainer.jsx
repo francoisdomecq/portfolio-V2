@@ -43,34 +43,23 @@ function ProjectContainer({ project, setProject }) {
             className="project-container"
             onClick={() => setProject(project)}
         >
-            <motion.button layout className="project-container-top myRipple">
-                <motion.p layout className="project-name">
-                    {project.name}
-                </motion.p>
-                <motion.img
-                    layout
-                    className="project-image"
-                    src={project.src}
-                    alt=""
-                />
-                <motion.p className="project-description">
-                    {project.descriptionEn}
-                </motion.p>
-            </motion.button>
-            <motion.div layout className="project-container-bottom">
+            <button className="project-container-top myRipple">
+                <p className="project-name">{project.name}</p>
+                <img className="project-image" src={project.src} alt="" />
+                <p className="project-description">{project.descriptionEn}</p>
+            </button>
+            <div className="project-container-bottom">
                 {project.languages.map((language) => {
                     return (
-                        <motion.div
+                        <div
                             key={language}
                             className="project-technology-container"
                         >
-                            <motion.p className="project-technology">
-                                {language}
-                            </motion.p>
-                        </motion.div>
+                            <p className="project-technology">{language}</p>
+                        </div>
                     );
                 })}
-            </motion.div>
+            </div>
         </motion.div>
     );
 }

@@ -16,12 +16,6 @@
     opacity: 1;
 }
 
-.title-filter {
-    color: aqua;
-    font-weight: 500;
-    font-size: 1em;
-}
-
 .filter-projects-button {
     display: flex;
     width: fit-content;
@@ -45,7 +39,7 @@
 }
 
 .filter-name {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .active {

@@ -4,23 +4,15 @@ import { Cloud } from 'react-icon-cloud';
 import { renderCustomIcon } from '../../utils/function';
 import { skillsData } from '../../data/skillsData';
 
-
 function AboutMe() {
     const colour = '#fff';
     const cloudIcons = skillsData.map((i) => renderCustomIcon(i, colour));
 
     return (
         <section className="container-about-me-background " id="aboutme">
-            <h1 className="title-about">About me</h1>
+            <h1 className="title-about-me reveal-on-scroll">About me</h1>
             <div className="container">
-                <div className="about-text-container ">
-                    {/* <div className="profile-picture-container">
-                        <img
-                            className="profile-picture reveal-on-scroll"
-                            src={PhotoFR}
-                            alt="Francois Domecq"
-                        />
-                    </div> */}
+                <div className="about-text-container reveal-on-scroll ">
                     <p className="about-text">
                         During my studies at the ENSC, I have been introduced to
                         cognitive sciences. It is a domain which combines
@@ -38,16 +30,44 @@ function AboutMe() {
                         cognitive engineer, I also have abilities in UX design
                         and human system interface. It led me to master Figma,
                         so I can make mock-ups for my different projects.
+                        <br />
+                        <br />
+                    </p>{' '}
+                    <p className="about-text">
+                        But I am still looking to improve myself as a coder, so
+                        I try to constantly learn new things. As a future
+                        cognitive engineer, I also have abilities in UX design
+                        and human system interface. It led me to master Figma,
+                        so I can make mock-ups for my different projects.
+                        <br />
+                        <br />
+                    </p>{' '}
+                    <p className="about-text">
+                        But I am still looking to improve myself as a coder, so
+                        I try to constantly learn new things. As a future
+                        cognitive engineer, I also have abilities in UX design
+                        and human system interface. It led me to master Figma,
+                        so I can make mock-ups for my different projects.
+                        <br />
+                        <br />
+                    </p>{' '}
+                    <p className="about-text">
+                        But I am still looking to improve myself as a coder, so
+                        I try to constantly learn new things. As a future
+                        cognitive engineer, I also have abilities in UX design
+                        and human system interface. It led me to master Figma,
+                        so I can make mock-ups for my different projects.
+                        <br />
+                        <br />
                     </p>
                 </div>
 
-                <div className="cloud-container">
+                <div className="cloud-container reveal-on-scroll">
                     <Cloud
                         id="skills-canvas"
                         canvasProps={{
                             display: 'flex',
                         }}
-                        className="skills-canvas reveal-on-scroll"
                         options={{
                             outlineColour: 'aqua',
                             clickToFront: 500,
