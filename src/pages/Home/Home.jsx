@@ -1,29 +1,24 @@
 import './Home.css';
-import { useEffect, useState } from 'react';
-import AboutMe from '../AboutMe/AboutMe';
 import Name from '../../components/Home_Name/Name';
 import PhotoFrBg from '../../assets/PhotoFRBg.png';
-import PhotoFrBgJpg from '../../assets/PhotoFRBg1.png';
+
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import particlesTemplate from '../../utils/particlesParams';
+
 function Home() {
-    const [x, setX] = useState();
-    const [y, setY] = useState();
-
-    var MDown = false;
-    var Color = 'red';
-
-    useEffect(() => {
-        // const update = (e) => {
-        //     setX(e.x);
-        //     setY(e.y);
-        // };
-        // window.addEventListener('mousemove', update);
-        // window.addEventListener('touchmove', update);
-    });
-
+    const handleInit = async (main) => {
+        await loadFull(main);
+    };
     return (
-        <section className="Home  " id="home">
-            <Name />
+        <section className="Home" id="home">
+            <Particles
+                id="particles"
+                options={particlesTemplate}
+                init={handleInit}
+            />
 
+            <Name />
             <div className="container-short-description">
                 <p className="description">
                     I am a french engineering student in Cognitive sciences at
@@ -46,7 +41,6 @@ function Home() {
                 </a>
             </div>
             <img className="photo-fr" src={PhotoFrBg}></img>
-
             {/*Ajouter une animation à droite qui lorsque l'on clique dessus redirige vers la page avec un jeu que je dois coder, ajouter leaderbord avec mail */}
         </section>
     );

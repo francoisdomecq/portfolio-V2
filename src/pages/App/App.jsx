@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+
+
 import Footer from '../../components/Footer/Footer';
 
 import AboutMe from '../AboutMe/AboutMe';
@@ -9,6 +11,8 @@ import Projects from '../Projects/Projects';
 
 import './App.css';
 function App() {
+
+
     function reveal() {
         var reveals = document.querySelectorAll('.reveal-on-scroll');
         for (var i = 0; i < reveals.length; i++) {
@@ -40,6 +44,7 @@ function App() {
                     <span>Scroll to top</span>
                 </button>
             </div> */}
+          
             <Home />
             <AboutMe />
             <Projects />

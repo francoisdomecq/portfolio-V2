@@ -100,6 +100,13 @@ a {
     animation: FadeIn ease-in 0.3s forwards 0.7s;
 }
 
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
 @media screen and (max-width: 468px) {
     .container-short-description {
         width: 87%;

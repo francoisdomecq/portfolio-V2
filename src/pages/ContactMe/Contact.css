@@ -20,3 +20,47 @@
     align-self: center;
     margin-top: 10em;
 }
+
+.container-message-clipboard {
+    display: flex;
+    position: fixed;
+    bottom: 5em;
+    align-self: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #3b7858;
+    transition: all 0.5s ease-in-out;
+}
+
+.text-message-clipboard {
+    display: flex;
+    font-size: 18;
+    font-weight: 500;
+    color: white;
+    gap: 0 2em;
+}
+
+.button-close-message-clipboard {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.2em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-left: 1em;
+}
+
+.button-close-message-clipboard:hover {
+    background-color: #3b7858;
+    cursor: pointer;
+}
+
+@media all and (max-width: 468px) {
+    .contact-cards-container {
+        flex-direction: column;
+        gap: 1.5em 0;
+        margin-top: 3em;
+    }
+}

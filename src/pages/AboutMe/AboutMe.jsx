@@ -1,12 +1,9 @@
-import { useEffect } from 'react';
-
 import './AboutMe.css';
 
 import { Cloud } from 'react-icon-cloud';
 import { renderCustomIcon } from '../../utils/function';
-
 import { skillsData } from '../../data/skillsData';
-import PhotoFR from '../../assets/PhotoFRBg.png';
+
 
 function AboutMe() {
     const colour = '#fff';
@@ -54,7 +51,6 @@ function AboutMe() {
                         options={{
                             outlineColour: 'aqua',
                             clickToFront: 500,
-
                             fadeIn: 200,
                             imadeMode: 'both',
                             pinchZoom: true,

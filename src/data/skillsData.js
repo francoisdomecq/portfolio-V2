@@ -18,6 +18,8 @@ import { siJest } from 'simple-icons/icons';
 import { siBootstrap } from 'simple-icons/icons';
 import { siGithub } from 'simple-icons/icons';
 import { siR } from 'simple-icons/icons';
+import { siMysql } from 'simple-icons/icons';
+import { siSqlite } from 'simple-icons/icons';
 
 export const skillsData = [
     siTypescript,
@@ -40,4 +42,6 @@ export const skillsData = [
     siBootstrap,
     siGithub,
     siR,
+    siMysql,
+    siSqlite,
 ];
