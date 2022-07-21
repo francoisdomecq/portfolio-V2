@@ -43,7 +43,7 @@ function App() {
             <Home />
             <AboutMe />
             <Projects />
-            <Experience />
+            {/* <Experience /> */}
             <ContactMe />
             <Footer />
         </div>

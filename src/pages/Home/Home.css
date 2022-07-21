@@ -109,4 +109,11 @@ a {
     .div-button-scroll-about-me {
         margin-left: 6%;
     }
+    .photo-fr {
+        align-self: center;
+        left: auto;
+        right: auto;
+        width: 40%;
+        animation: FadeIn ease-in 0.3s forwards 0.3s;
+    }
 }
