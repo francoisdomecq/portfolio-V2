@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
+import Footer from '../../components/Footer/Footer';
 
 import AboutMe from '../AboutMe/AboutMe';
 import ContactMe from '../ContactMe/ContactMe';
 import Experience from '../Experiences/Experience';
 import Home from '../Home/Home';
 import Projects from '../Projects/Projects';
-import Skills from '../Skills/Skills';
 
 import './App.css';
 function App() {
@@ -43,9 +43,9 @@ function App() {
             <Home />
             <AboutMe />
             <Projects />
-            <Skills />
-            {/* <Experience /> */}
+            <Experience />
             <ContactMe />
+            <Footer />
         </div>
     );
 }

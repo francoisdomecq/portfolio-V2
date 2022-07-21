@@ -1,14 +1,22 @@
 .container-contact {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     max-width: 100%;
     background: #d1d7db;
     text-align: center;
+    padding-bottom: 10em;
 }
 
 .title-contact {
     font-size: 1.5em;
     font-weight: 700;
     margin-top: 1em;
+}
+
+.contact-cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0 1.5em;
+    align-self: center;
+    margin-top: 10em;
 }

@@ -2,7 +2,8 @@ import './Home.css';
 import { useEffect, useState } from 'react';
 import AboutMe from '../AboutMe/AboutMe';
 import Name from '../../components/Home_Name/Name';
-
+import PhotoFrBg from '../../assets/PhotoFRBg.png';
+import PhotoFrBgJpg from '../../assets/PhotoFRBg1.png';
 function Home() {
     const [x, setX] = useState();
     const [y, setY] = useState();
@@ -44,6 +45,7 @@ function Home() {
                     <button className="button-scroll-about-me">About me</button>
                 </a>
             </div>
+            <img className="photo-fr" src={PhotoFrBg}></img>
 
             {/*Ajouter une animation à droite qui lorsque l'on clique dessus redirige vers la page avec un jeu que je dois coder, ajouter leaderbord avec mail */}
         </section>

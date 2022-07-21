@@ -84,7 +84,7 @@ function Header() {
                         Projects
                     </a>
                 </li>
-                <li className="navbar_item slideInDown-4">
+                {/* <li className="navbar_item slideInDown-4">
                     <a
                         className="navbar_link navbar_link4 hover-underline-animation"
                         href="#skills"
@@ -92,7 +92,7 @@ function Header() {
                     >
                         Skills
                     </a>
-                </li>
+                </li> */}
                 <li className="navbar_item slideInDown-5">
                     <a
                         className="navbar_link navbar_link5 hover-underline-animation"

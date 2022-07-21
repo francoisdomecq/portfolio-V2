@@ -2,21 +2,28 @@ import { useEffect } from 'react';
 
 import './AboutMe.css';
 
-import PhotoFR from '../../assets/PhotoFR.jpg';
+import { Cloud } from 'react-icon-cloud';
+import { renderCustomIcon } from '../../utils/function';
+
+import { skillsData } from '../../data/skillsData';
+import PhotoFR from '../../assets/PhotoFRBg.png';
 
 function AboutMe() {
+    const colour = '#fff';
+    const cloudIcons = skillsData.map((i) => renderCustomIcon(i, colour));
+
     return (
         <section className="container-about-me-background " id="aboutme">
             <h1 className="title-about">About me</h1>
             <div className="container">
-                <div className="about-text-container reveal-on-scroll">
-                    <p className="about-text">
-                        Hi There ! My name is François Domecq, I am a french
-                        engineering student at the ENSC (Ecole Nationale
-                        Supérieure de Cognitique) in Bordeaux.
-                        <br />
-                        <br />
-                    </p>
+                <div className="about-text-container ">
+                    {/* <div className="profile-picture-container">
+                        <img
+                            className="profile-picture reveal-on-scroll"
+                            src={PhotoFR}
+                            alt="Francois Domecq"
+                        />
+                    </div> */}
                     <p className="about-text">
                         During my studies at the ENSC, I have been introduced to
                         cognitive sciences. It is a domain which combines
@@ -37,12 +44,32 @@ function AboutMe() {
                     </p>
                 </div>
 
-                <div className="profile-picture-container">
-                    <img
-                        className="profile-picture reveal-on-scroll"
-                        src={PhotoFR}
-                        alt="Francois Domecq"
-                    />
+                <div className="cloud-container">
+                    <Cloud
+                        id="skills-canvas"
+                        canvasProps={{
+                            display: 'flex',
+                        }}
+                        className="skills-canvas reveal-on-scroll"
+                        options={{
+                            outlineColour: 'aqua',
+                            clickToFront: 500,
+
+                            fadeIn: 200,
+                            imadeMode: 'both',
+                            pinchZoom: true,
+                            shuffleTags: true,
+                            weight: true,
+                            zoom: 1.1,
+                            zoomMax: 1.5,
+                            zoomMin: 1,
+                            tooltip: 'native',
+                            tooltipDelay: 0,
+                            freezeActive: true,
+                        }}
+                    >
+                        {cloudIcons}
+                    </Cloud>
                 </div>
             </div>
 
