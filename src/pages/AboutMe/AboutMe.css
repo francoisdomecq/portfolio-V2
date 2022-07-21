@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    padding-top: 1.5rem;
+    padding-top: 3rem;
     text-align: center;
-  
     background-color: aliceblue;
 }
 /* #e3edf9 ou #FCFBF4 ou #d7caa8  */
@@ -29,6 +28,7 @@
     text-align: left;
     padding-left: 1%;
     padding-right: 1%;
+    padding-top: 3%;
     width: 100%;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .about-text {
-    font-size: 1rem;
+    font-size: 1.2em;
     font-family: 'Hauora sans';
     font-weight: 500;
     color: #050b13;
@@ -65,12 +65,15 @@
     opacity: 1;
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 768px) {
     .container {
         flex-direction: column;
     }
     .about-text-container {
-        width: 80%;
+        width: 100%;
+        justify-content: center;
+        padding: 1em;
+        padding-top: 0;
     }
 
     .profile-picture {

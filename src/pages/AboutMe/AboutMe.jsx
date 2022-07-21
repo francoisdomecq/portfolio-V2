@@ -42,24 +42,6 @@ function AboutMe() {
                         <br />
                         <br />
                     </p>{' '}
-                    <p className="about-text">
-                        But I am still looking to improve myself as a coder, so
-                        I try to constantly learn new things. As a future
-                        cognitive engineer, I also have abilities in UX design
-                        and human system interface. It led me to master Figma,
-                        so I can make mock-ups for my different projects.
-                        <br />
-                        <br />
-                    </p>{' '}
-                    <p className="about-text">
-                        But I am still looking to improve myself as a coder, so
-                        I try to constantly learn new things. As a future
-                        cognitive engineer, I also have abilities in UX design
-                        and human system interface. It led me to master Figma,
-                        so I can make mock-ups for my different projects.
-                        <br />
-                        <br />
-                    </p>
                 </div>
 
                 <div className="cloud-container reveal-on-scroll">
@@ -69,7 +51,9 @@ function AboutMe() {
                             display: 'flex',
                         }}
                         options={{
-                            outlineColour: 'aqua',
+                            outlineColour: 'black',
+                            outlineRadius: 5,
+                            outlineMethod: 'size',
                             clickToFront: 500,
                             fadeIn: 200,
                             imadeMode: 'both',
@@ -82,6 +66,8 @@ function AboutMe() {
                             tooltip: 'native',
                             tooltipDelay: 0,
                             freezeActive: true,
+                            shadow: '#000',
+                            shadowOffset: [0.5, 0.5],
                         }}
                     >
                         {cloudIcons}

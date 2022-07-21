@@ -10,6 +10,7 @@ export const experiences = [
         description:
             'Minim aute non aliquip fugiat ex sint quis consectetur magna quis esse. Sint proident elit esse nostrud nisi enim aute sunt nostrud et. Ex fugiat deserunt ipsum consequat commodo magna esse ullamco dolore ex eiusmod mollit. Incididunt ut ex excepteur duis culpa ipsum ipsum duis tempor quis.',
         imageLink: monp,
+        imageUrl: '../../assets/monparcourssante.png',
         siteLink: 'https;//mon-parcours-sante.fr',
     },
     {

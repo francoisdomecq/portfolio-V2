@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 
-import Footer from '../../components/Footer/Footer';
-
 import AboutMe from '../AboutMe/AboutMe';
 import ContactMe from '../ContactMe/ContactMe';
 import Experience from '../Experiences/Experience';
@@ -47,7 +45,6 @@ function App() {
             <Projects />
             <Experience />
             <ContactMe />
-            <Footer />
         </div>
     );
 }

@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    background: #d1d7db;
+    background: #f0f3f5;
     text-align: center;
-    padding-bottom: 10em;
+    padding-bottom: 3%;
 }
 
 .title-contact {
-    font-size: 1.5em;
+    font-size: 3em;
+    color: #050b13;
     font-weight: 700;
     margin-top: 1em;
     transform: translateY(100px);
@@ -26,25 +27,31 @@
     flex-direction: row;
     gap: 0 1.5em;
     align-self: center;
-    margin-top: 10em;
+    margin-top: 5em;
 }
 
 .container-message-clipboard {
     display: flex;
-    position: fixed;
-    bottom: 5em;
+    margin-top: 3%;
     align-self: center;
     width: fit-content;
     height: fit-content;
     padding: 1em;
     border-radius: 1em;
     background-color: #3b7858;
+    opacity: 0;
+    visibility: hidden;
     transition: all 0.5s ease-in-out;
+}
+
+.container-message-clipboard.message-clipboard-shown {
+    opacity: 1;
+    visibility: visible;
 }
 
 .text-message-clipboard {
     display: flex;
-    font-size: 18;
+    font-size: 1.2em;
     font-weight: 500;
     color: white;
     gap: 0 2em;
@@ -53,7 +60,7 @@
 .button-close-message-clipboard {
     width: fit-content;
     height: fit-content;
-    padding: 0.2em;
+    padding: 0.3em;
     border-radius: 50%;
     border: none;
     outline: none;
@@ -65,7 +72,15 @@
     cursor: pointer;
 }
 
-@media all and (max-width: 468px) {
+.end-text {
+    display: flex;
+    margin-top: 3%;
+    align-self: center;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+@media all and (max-width: 768px) {
     .contact-cards-container {
         flex-direction: column;
         gap: 1.5em 0;

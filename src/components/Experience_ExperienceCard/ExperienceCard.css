@@ -79,3 +79,24 @@
 .experience-card-technologies {
     color: white;
 }
+
+@media all and (max-width: 768px) {
+    .experience-card-container:nth-child(1) {
+        background-image: url('../../assets/monparcourssante.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .experience-card-container:nth-child(2) {
+        background-image: url('../../assets/mrtshirt.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .experience-image {
+        display: none;
+    }
+    .experience-card-informations {
+        opacity: 0.7;
+
+        background-color: #2f2f3a;
+    }
+}

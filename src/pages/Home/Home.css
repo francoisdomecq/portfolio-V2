@@ -201,7 +201,7 @@ span.bouncing {
     animation-name: rubberBand;
 }
 
-@media screen and (max-width: 468px) {
+@media screen and (max-width: 768px) {
     .container-name {
         margin-top: 70%;
         margin-bottom: 10%;
@@ -211,9 +211,6 @@ span.bouncing {
         font-size: 2rem !important;
         line-height: 3rem;
     }
-}
-
-@media screen and (max-width: 468px) {
     .container-short-description {
         width: 87%;
         margin-left: 6%;
