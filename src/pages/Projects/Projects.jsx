@@ -88,17 +88,32 @@ function Projects() {
                                 <h1 className="page-project-title">
                                     Complementary informations
                                 </h1>
-                                <p className="page-project-description-text">
-                                    Développement Frontend
-                                </p>
+                                <div className="page-project-description-text-container">
+                                    <p className="page-project-description-text">
+                                        Development
+                                    </p>
+                                    <p className="page-project-description-text">
+                                        {selectedProject.development}
+                                    </p>
+                                </div>
                                 <div className="page-project-separator" />
-                                <p className="page-project-description-text">
-                                    Durée
-                                </p>
+                                <div className="page-project-description-text-container">
+                                    <p className="page-project-description-text">
+                                        Duration
+                                    </p>
+                                    <p className="page-project-description-text">
+                                        {selectedProject.duration}
+                                    </p>
+                                </div>
                                 <div className="page-project-separator" />
-                                <p className="page-project-description-text">
-                                    Equipe
-                                </p>
+                                <div className="page-project-description-text-container">
+                                    <p className="page-project-description-text">
+                                        Team
+                                    </p>
+                                    <p className="page-project-description-text">
+                                        {selectedProject.team}
+                                    </p>
+                                </div>
                                 <div className="page-project-separator" />
                                 <a
                                     rel="noreferrer"
@@ -121,6 +136,13 @@ function Projects() {
                     </div>
                 </div>
             </section>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#f0f3f5"
+                    fill-opacity="1"
+                    d="M0,256L1440,192L1440,320L0,320Z"
+                ></path>
+            </svg>
         </section>
     ) : (
         <section className="page-projects" id="projects">
@@ -147,7 +169,7 @@ function Projects() {
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path
-                    fill="#0099ff"
+                    fill="#f0f3f5"
                     fill-opacity="1"
                     d="M0,256L1440,192L1440,320L0,320Z"
                 ></path>

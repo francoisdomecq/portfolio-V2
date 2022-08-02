@@ -93,8 +93,8 @@ function Home() {
                     >
                         Ecole Nationale Supérieure de Cognitique
                     </a>
-                    . I am passionate about developing software, websites and
-                    mobile applications..
+                    . I am currently looking for a 6 months internship starting
+                    in February 2023.
                 </p>
             </div>
             <div className="div-button-scroll-about-me">

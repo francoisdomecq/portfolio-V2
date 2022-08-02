@@ -14,34 +14,59 @@ function AboutMe() {
             <div className="container">
                 <div className="about-text-container reveal-on-scroll ">
                     <p className="about-text">
-                        During my studies at the ENSC, I have been introduced to
-                        cognitive sciences. It is a domain which combines
-                        computer science, and human factors. In my first and
-                        second year, I had the opportunity to lead computer
-                        science projects of any kind (web programming, mobile
-                        programming, game programming..). My main programming
-                        languages are C# (ASP .Net Core), JavaScript (React,
-                        ReactNative, Node.Js) and Python. <br />
+                        Hi ! My name is François, I am a french student in
+                        cognitive sciences. I am passionate about developing
+                        software, websites and mobile applications. I dedicate
+                        my work to give people the best user experience
+                        possible.
+                        <br /> <br />
+                    </p>
+                    <p className="about-text">
+                        After two years of preparatory course, I entered in the{' '}
+                        <a
+                            target={'_blank'}
+                            rel="noreferrer"
+                            href="https://ensc.bordeaux-inp.fr/fr"
+                            className="about-special-text"
+                        >
+                            Ecole Nationale Supérieure de Cognitique
+                        </a>{' '}
+                        where I have been introduced to cognitive sciences. It
+                        is a domain which combines computer science, and human
+                        factors. For my last year out of my 5 years of higher
+                        education, I am doing an academic exchange at the{' '}
+                        <a
+                            target={'_blank'}
+                            rel="norefferrer"
+                            href="https://uqam.ca/"
+                            className="about-special-text"
+                        >
+                            Université du Quebec à Montréal
+                        </a>{' '}
+                        to specialize myself in software development.
+                        <br />
                         <br />
                     </p>
                     <p className="about-text">
-                        But I am still looking to improve myself as a coder, so
-                        I try to constantly learn new things. As a future
-                        cognitive engineer, I also have abilities in UX design
-                        and human system interface. It led me to master Figma,
-                        so I can make mock-ups for my different projects.
+                        In my first and second year, I had the opportunity to
+                        lead{' '}
+                        <a className="about-special-text" href="#projects">
+                            computer science projects
+                        </a>{' '}
+                        of any kind. It allowed me to discover new languages and
+                        to improve my skills as a coder. As a passionate, I am
+                        always looking to improve my programming skills.
                         <br />
                         <br />
                     </p>{' '}
                     <p className="about-text">
-                        But I am still looking to improve myself as a coder, so
-                        I try to constantly learn new things. As a future
-                        cognitive engineer, I also have abilities in UX design
-                        and human system interface. It led me to master Figma,
-                        so I can make mock-ups for my different projects.
-                        <br />
-                        <br />
-                    </p>{' '}
+                        Besides all this, I played handball for 10 years
+                        including one year at a national level. I recently
+                        discovered my self a passion in motorsports such as
+                        formula 1. I'm also a music lover of any kind, mostly
+                        rap, but also classical music for example as I am
+                        learning the piano as a self learner.
+                    </p>
                 </div>
 
                 <div className="cloud-container reveal-on-scroll">

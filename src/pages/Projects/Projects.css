@@ -209,6 +209,11 @@
     transform: rotate(-4deg) scale(1.2, 1);
 }
 
+.page-project-description-text-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 @media all and (max-width: 900px) {
     .container-projects {
         grid-template-columns: repeat(1, 1fr);
