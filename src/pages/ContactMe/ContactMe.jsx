@@ -65,6 +65,14 @@ function ContactMe() {
                     clickMail={clickMail}
                 ></ContactCard>
             </div>
+            <a
+                className="text-resume reveal-on-scroll"
+                href="CV_Domecq.pdf"
+                target="_blank"
+                alt="Download my resume"
+            >
+                <p>Download my resume</p>
+            </a>
 
             <div className="container-message-clipboard" id="message-clipboard">
                 <div className="text-message-clipboard">

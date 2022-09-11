@@ -178,15 +178,15 @@
     }
 
     .burger-bar.is-on-about-page {
-        background-color: red;
+        background-color: RGB(5, 11, 19);
     }
 
     .is-on-about-page.burger-bar::before {
-        background-color: red;
+        background-color: RGB(5, 11, 19);
     }
 
     .is-on-about-page.burger-bar::after {
-        background-color: red;
+        background-color: RGB(5, 11, 19);
     }
 
     .burger-bar::before,

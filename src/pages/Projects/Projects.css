@@ -21,7 +21,7 @@
 
 .container-projects {
     display: grid;
-    max-width: 80%;
+    max-width: 75%;
     max-height: 60%;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5em 1.5em;

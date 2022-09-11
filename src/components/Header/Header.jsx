@@ -34,9 +34,9 @@ function Header() {
                 if (
                     currentScrollPos >=
                         document.getElementById('home').getBoundingClientRect()
-                            .height &&
+                            .height -50 &&
                     currentScrollPos <
-                        document.getElementById('projects').offsetTop - 50
+                        document.getElementById('projects').offsetTop - 100
                 )
                     document
                         .getElementById('burger_bar')
@@ -93,7 +93,7 @@ function Header() {
                         Skills
                     </a>
                 </li> */}
-                <li className="navbar_item slideInDown-5">
+                {/* <li className="navbar_item slideInDown-5">
                     <a
                         className="navbar_link navbar_link5 hover-underline-animation"
                         href="#experience"
@@ -101,7 +101,7 @@ function Header() {
                     >
                         Experience
                     </a>
-                </li>
+                </li> */}
                 <li className="navbar_item slideInDown-6">
                     <a
                         className="navbar_link navbar_link6 hover-underline-animation"

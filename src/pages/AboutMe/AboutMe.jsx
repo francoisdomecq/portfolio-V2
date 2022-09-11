@@ -91,8 +91,8 @@ function AboutMe() {
                             tooltip: 'native',
                             tooltipDelay: 0,
                             freezeActive: true,
-                            shadow: '#000',
-                            shadowOffset: [0.5, 0.5],
+                            // shadow: '#000',
+                            // shadowOffset: [0.5, 0.5],
                         }}
                     >
                         {cloudIcons}
