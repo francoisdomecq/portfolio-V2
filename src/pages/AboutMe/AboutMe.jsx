@@ -15,10 +15,10 @@ function AboutMe() {
                 <div className="about-text-container reveal-on-scroll ">
                     <p className="about-text">
                         Hi ! My name is François, I am a french student in
-                        cognitive sciences. I am passionate about developing
-                        software, websites and mobile applications. I dedicate
-                        my work to give people the best user experience
-                        possible.
+                        cognitive sciences. <br />I am passionate about
+                        developing software, websites and mobile applications.{' '}
+                        <br />I dedicate my work to give people the best user
+                        experience possible.
                         <br /> <br />
                     </p>
                     <p className="about-text">
@@ -55,7 +55,8 @@ function AboutMe() {
                         </a>{' '}
                         of any kind. It allowed me to discover new languages and
                         to improve my skills as a coder. As a passionate, I am
-                        always looking to improve my programming skills.
+                        always looking to improve my programming skills. I also
+                        have abilities in UX design and human system interface.
                         <br />
                         <br />
                     </p>{' '}

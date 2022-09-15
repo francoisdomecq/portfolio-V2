@@ -39,9 +39,11 @@ function Projects() {
     }
 
     useEffect(() => {
-        setProjects(projectsData);
-        setFilteredProjects(projectsData);
-    }, [selectedProject]);
+        if (selectedFilter === 'All') {
+            setProjects(projectsData);
+            setFilteredProjects(projectsData);
+        }
+    }, [selectedProject, selectedFilter]);
 
     return selectedProject ? (
         <section className="page-projects">
@@ -131,7 +133,36 @@ function Projects() {
                             <div
                                 className="page-project-technologies"
                                 id="page-project-technologies"
-                            ></div>
+                            >
+                                <h1 className="page-project-title">
+                                    Technologies
+                                </h1>
+                                {selectedProject.iconLanguages.map(
+                                    (iconLanguage) => {
+                                        return (
+                                            <div className="page-project-technologies-technology">
+                                                <svg
+                                                    width="48"
+                                                    height="48"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        fill={`#${iconLanguage.icon.hex}`}
+                                                        fill-opacity="1"
+                                                        d={
+                                                            iconLanguage.icon
+                                                                .path
+                                                        }
+                                                    ></path>
+                                                </svg>
+                                                <p className="page-project-technologies-technology-slug">
+                                                    {iconLanguage.slug}
+                                                </p>
+                                            </div>
+                                        );
+                                    }
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

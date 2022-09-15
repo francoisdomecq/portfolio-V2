@@ -16,6 +16,13 @@ import EnsciensImg8 from '../assets/Ensciens/EnsciensImg8.jpg';
 import BaroudeursImg1 from '../assets/Baroudeurs/Image1.svg';
 import BaroudeursImg22 from '../assets/Baroudeurs/Image1.png';
 
+import { siReact } from 'simple-icons/icons';
+import { siDotnet } from 'simple-icons/icons';
+import { siAzuredevops } from 'simple-icons/icons';
+import { siNodedotjs } from 'simple-icons/icons';
+import { siMongodb } from 'simple-icons/icons';
+import { siCsharp } from 'simple-icons/icons';
+
 export const projectsData = [
     {
         name: 'Encsiens',
@@ -46,20 +53,45 @@ export const projectsData = [
             ],
         },
         descriptionLongueEn: (
-            <p>
-                The aim of this project was to create a mobile application. The
-                application developed here is a social network specific to the
-                ENSC. The different offices, clubs and students of the school
-                can post publications. They can also follow the different
-                upcoming events and see the progress of the family cup. This
-                application also allows students who do not have Facebook to be
-                kept up to date with the school's student life.
-            </p>
+            <div>
+                <p>
+                    The aim of this project was to create a mobile application.
+                    The application developed here is a social network specific
+                    to the ENSC. The different offices, clubs and students of
+                    the school can post publications. They can also follow the
+                    different upcoming events and see the progress of the family
+                    cup. The main goal of this application is to allow students
+                    who do not have Facebook to be kept up to date with the
+                    school's student life.
+                </p>
+                <p>
+                    The backend has been developed with ASP .NET Core and Entity
+                    Framework on a monthly project. It suits a mvc architecture.
+                    It ishosted on azure and you can have a view of the
+                    interface :{' '}
+                    <a
+                        href="https://ensc-ensciens.azurewebsites.net/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        here.
+                    </a>
+                </p>
+                <p>
+                    The frontend has been developed using React Native on a
+                    monthly project also.
+                </p>
+            </div>
         ),
-        technologiesEn: ['React'],
         duration: '3 months',
-        team: '2 students',
         development: 'Frontend & Backend',
+        team: '2 students',
+        iconLanguages: [
+            { icon: siReact, slug: 'React' },
+            { icon: siDotnet, slug: '.Net' },
+            { icon: siAzuredevops, slug: 'Azure' },
+        ],
+        iconSlug: ['React', '.Net', 'Azure'],
         github: '',
         link: 'https://ensc-ensciens.azurewebsites.net/',
     },
@@ -74,15 +106,12 @@ export const projectsData = [
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: '',
-        technologiesEn: [
-            // siReact,
-            // siNodedotjs,
-            // siJavascript,
-            // siExpress,
-            // siHtml5,
-            // siCss3,
-            // siFigma,
+        iconLanguages: [
+            { icon: siReact, slug: 'React Native' },
+            { icon: siNodedotjs, slug: 'Node JS' },
+            { icon: siMongodb, slug: 'Mongo DB' },
         ],
+        iconSlug: ['React', '.Net', 'Azure'],
         duration: '4 months',
         team: '1 student',
         development: 'Frontend & Backend',
@@ -99,7 +128,12 @@ export const projectsData = [
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: '',
-        // technologiesEn: [siReact, siTypescript, siNodedotjs, siExpress],
+        iconLanguages: [
+            { icon: siReact, slug: 'React Native' },
+            { icon: siNodedotjs, slug: 'Node JS' },
+            { icon: siMongodb, slug: 'Mongo DB' },
+        ],
+        iconSlug: ['React', '.Net', 'Azure'],
         development: 'Frontend & Backend',
         duration: '2 months',
         team: '1 student',
@@ -115,7 +149,8 @@ export const projectsData = [
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: '',
-        // technologiesEn: ['csharp'],
+        iconLanguages: [{ icon: siCsharp, slug: 'C#' }],
+        iconSlug: ['React', '.Net', 'Azure'],
         duration: '2 months',
         team: '2 student',
         development: 'Game development',

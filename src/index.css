@@ -22,6 +22,10 @@ code {
         monospace;
 }
 
+svg {
+    border: none;
+}
+
 html {
     scroll-behavior: smooth;
 }

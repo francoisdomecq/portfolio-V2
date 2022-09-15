@@ -100,3 +100,12 @@
     font-size: 1em;
     font-weight: 500;
 }
+
+@media screen and (max-width: 768px) {
+    .project-technology {
+        font-size: 0.6em;
+    }
+    .project-technology-container {
+        border-radius: 0.7em;
+    }
+}

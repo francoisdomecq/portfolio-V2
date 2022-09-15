@@ -158,8 +158,17 @@
     width: 35%;
     background-color: #2f2f3a;
     border-radius: 1em;
-    cursor: pointer;
-    overflow: hidden;
+    padding: 1em;
+}
+
+.page-project-technologies-technology {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.page-project-technologies-technology-slug {
+    color: white;
 }
 
 .icons-container {
@@ -232,5 +241,9 @@
     }
     .page-project-informations {
         width: 100%;
+    }
+    .page-project-technologies {
+        width: 100%;
+        margin-top: 1em;
     }
 }

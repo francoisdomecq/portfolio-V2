@@ -4,6 +4,7 @@ import { useSwipeable } from 'react-swipeable';
 import './Project_Carousel.css';
 import CaretRight from '../../assets/caret-right.svg';
 import CaretLeft from '../../assets/caret-left.svg';
+
 export const CarouselItem = ({ children, width }) => {
     return (
         <div className="carousel-item" style={{ width: width }}>
@@ -15,13 +16,13 @@ export const CarouselItem = ({ children, width }) => {
 function Carousel({ children, descriptions }) {
     const [paused, setPaused] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
+
     const updateIndex = (newIndex) => {
         if (newIndex < 0) {
             newIndex = React.Children.count(children) - 1;
         } else if (newIndex >= React.Children.count(children)) {
             newIndex = 0;
         }
-
         setActiveIndex(newIndex);
     };
 
@@ -51,8 +52,6 @@ function Carousel({ children, descriptions }) {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
         >
-            {' '}
-            {console.log(descriptions)}
             <div className="inner-bg">
                 <button
                     onClick={() => updateIndex(activeIndex - 1)}
