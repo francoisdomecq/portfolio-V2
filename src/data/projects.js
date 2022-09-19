@@ -1,3 +1,5 @@
+import './projects.css';
+
 import Ensciens from '../assets/Projets/Ensciens.svg';
 import RapJeu from '../assets/Projets/RapJeu.svg';
 import Baroudeurs from '../assets/Projets/Baroudeurs.svg';
@@ -15,6 +17,14 @@ import EnsciensImg8 from '../assets/Ensciens/EnsciensImg8.jpg';
 
 import BaroudeursImg1 from '../assets/Baroudeurs/Image1.svg';
 import BaroudeursImg22 from '../assets/Baroudeurs/Image1.png';
+
+import RapJeu1 from '../assets/RapJeu/RapJeu1.jpg';
+import RapJeu2 from '../assets/RapJeu/RapJeu2.jpg';
+import RapJeu3 from '../assets/RapJeu/RapJeu3.jpg';
+import RapJeu4 from '../assets/RapJeu/RapJeu4.jpg';
+import RapJeu5 from '../assets/RapJeu/RapJeu5.jpg';
+import RapJeu6 from '../assets/RapJeu/RapJeu6.jpg';
+import RapJeu7 from '../assets/RapJeu/RapJeu7.jpg';
 
 import { siReact } from 'simple-icons/icons';
 import { siDotnet } from 'simple-icons/icons';
@@ -56,19 +66,25 @@ export const projectsData = [
             <div>
                 <p>
                     The aim of this project was to create a mobile application.
-                    The application developed here is a social network specific
-                    to the ENSC. The different offices, clubs and students of
-                    the school can post publications. They can also follow the
-                    different upcoming events and see the progress of the family
-                    cup. The main goal of this application is to allow students
-                    who do not have Facebook to be kept up to date with the
-                    school's student life.
+                    The application developed here is a{' '}
+                    <span className="text-highlight">social network</span>{' '}
+                    specific to the ENSC. The different offices, clubs and
+                    students of the school can{' '}
+                    <span className="text-highlight">post publications</span>.
+                    They can also follow the different{' '}
+                    <span className="text-highlight">upcoming events</span> and
+                    see the progress of the family cup. The main goal of this
+                    application is to allow students who do not have Facebook to
+                    be kept up to date with the school's student life.
                 </p>
+                <br />
                 <p>
-                    The backend has been developed with ASP .NET Core and Entity
-                    Framework on a monthly project. It suits a mvc architecture.
-                    It ishosted on azure and you can have a view of the
-                    interface :{' '}
+                    The backend has been developed with{' '}
+                    <span className="text-highlight">Asp .Net Core</span> and{' '}
+                    <span className="text-highlight">Entity Framework</span> on
+                    a monthly project. It suits a mvc architecture. It is hosted
+                    on <span className="text-highlight">azure</span> and you can
+                    have a view of the interface :{' '}
                     <a
                         href="https://ensc-ensciens.azurewebsites.net/"
                         target="_blank"
@@ -77,8 +93,10 @@ export const projectsData = [
                         here.
                     </a>
                 </p>
+                <br />
                 <p>
-                    The frontend has been developed using React Native on a
+                    The frontend has been developed using{' '}
+                    <span className="text-highlight">React Native</span> on a
                     monthly project also.
                 </p>
             </div>
@@ -102,10 +120,49 @@ export const projectsData = [
             'Web application to play the game Rap Game from the youtube show of the same name',
         languages: ['React', 'Node JS', 'Javascript'],
         carousel: {
-            images: [],
-            description: ['image1', 'image2', 'image3', 'image4', 'image5'],
+            images: [RapJeu1, RapJeu2, RapJeu3, RapJeu4, RapJeu5, RapJeu6],
+            description: [
+                'Games picking screen',
+                "The 'Mytho pas mytho' (Liar or not liar) game",
+                "The 'Rap génie ou gênant' (Genius or embarassing rap) game",
+                'The Rolland Gamos game',
+                "The 'Les enchères' (The auctions) game",
+                "The 'Top 5' game'",
+            ],
         },
-        descriptionLongueEn: '',
+        descriptionLongueEn: (
+            <div>
+                <p>
+                    Rap Jeu is a french{' '}
+                    <a
+                        href="https://www.youtube.com/watch?v=nfwXqWNuqVk&list=PLLkvlAQ5R3l8zLZWcwcjkMQ1pU4BQlAcp"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        youtube show
+                    </a>
+                    . It is a program where celebrities related to the rap
+                    culture compete in different games. The purpose of this
+                    project is to design and develop an online quiz website
+                    based on the show, and its visual identity.
+                </p>
+                <br />
+                <p>
+                    In a first time, players must define a gamemaster that will
+                    animate the game. Once the teams are created, the gamemaster
+                    picks two games among five. Two games are already
+                    preselected as they are mandatory, as in the show. Players
+                    can then enjoy the game and do their best to show off their
+                    rap culture !
+                </p>
+                <br />
+                <p>
+                    The frontend has been developed with React JS. Backend has
+                    been developed using Node JS and its framework Express. The
+                    database is hosted on Mongodb.{' '}
+                </p>
+            </div>
+        ),
         iconLanguages: [
             { icon: siReact, slug: 'React Native' },
             { icon: siNodedotjs, slug: 'Node JS' },
@@ -127,7 +184,17 @@ export const projectsData = [
             images: [BaroudeursImg1, BaroudeursImg22],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
-        descriptionLongueEn: '',
+        descriptionLongueEn: (
+            <div>
+                <p></p>
+                <p>
+                    The backend has been developed using NodeJS and its
+                    framework Express. The database is hosted on Mongodb.
+                </p>
+                <br />
+                <p>The frontend has been developed with React Native.</p>
+            </div>
+        ),
         iconLanguages: [
             { icon: siReact, slug: 'React Native' },
             { icon: siNodedotjs, slug: 'Node JS' },
@@ -142,13 +209,26 @@ export const projectsData = [
         name: 'RogueLike Pirate',
         src: RogueLike,
         descriptionEn:
-            'RogueLike game, programmed as a console application, where the player evolves in a pirate universe',
+            'RogueLike game, programmed as a console application, where the player evolves in a pirate universe, génération map aléatoire, comportement des monstres pour combat, modification tileset',
         languages: ['C#'],
         carousel: {
             images: [],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
-        descriptionLongueEn: '',
+        descriptionLongueEn: (
+            <div>
+                <p>
+                    The goal of this project was to develop a roguelike game.
+                    Roguelike games are..
+                </p>
+                <p>
+                    My colleague and I decided to develop a game that takes
+                    place in a pirate world. Scénario, modification du tileset,
+                    diagramme de classe
+                </p>
+                <p>On this game, you can 15 niveaux, trouver parchemins</p>
+            </div>
+        ),
         iconLanguages: [{ icon: siCsharp, slug: 'C#' }],
         iconSlug: ['React', '.Net', 'Azure'],
         duration: '2 months',

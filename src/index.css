@@ -22,6 +22,9 @@ code {
         monospace;
 }
 
+p {
+    line-height: 1.5;
+}
 svg {
     border: none;
 }

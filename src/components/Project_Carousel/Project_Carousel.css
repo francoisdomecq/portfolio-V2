@@ -6,6 +6,8 @@
 
 .inner-bg {
     position: relative;
+    border: none;
+    background-color: none;
 }
 
 .inner {
