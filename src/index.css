@@ -48,6 +48,11 @@ button:hover {
     src: url('./fonts/HauoraSans/Hauora-Regular.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Nexa';
+    src: url('./fonts//Nexa/Nexa-Trial-Bold.woff') format('woff');
+}
+
 ::-webkit-scrollbar {
     width: 0.5em;
     padding: 0.1em;

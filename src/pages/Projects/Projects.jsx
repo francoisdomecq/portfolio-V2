@@ -12,6 +12,7 @@ import './Projects.css';
 
 import { projectsData } from '../../data/projects.js';
 import GitHubIcon from '../../assets/githubLight.svg';
+import PlayIcon from '../../assets/play.svg';
 
 function Projects() {
     const [selectedFilter, setSelectedFilter] = useState('All');
@@ -92,15 +93,6 @@ function Projects() {
                                 </h1>
                                 <div className="page-project-description-text-container">
                                     <p className="page-project-description-text">
-                                        Development
-                                    </p>
-                                    <p className="page-project-description-text">
-                                        {selectedProject.development}
-                                    </p>
-                                </div>
-                                <div className="page-project-separator" />
-                                <div className="page-project-description-text-container">
-                                    <p className="page-project-description-text">
                                         Duration
                                     </p>
                                     <p className="page-project-description-text">
@@ -117,18 +109,38 @@ function Projects() {
                                     </p>
                                 </div>
                                 <div className="page-project-separator" />
-                                <a
-                                    rel="noreferrer"
-                                    href={selectedProject.github}
-                                    target="_blank"
-                                    alt="Lien vers le dépôt github"
-                                >
-                                    {/* <img
-                                        className="page-project-icon"
-                                        src={GitHubIcon}
-                                        alt="Icon Link to GitHub repository"
-                                    /> */}
-                                </a>
+                                <div className="page-project-description-text-container">
+                                    <p className="page-project-description-text">
+                                        See the project
+                                    </p>
+                                    <div className="page-project-links-container">
+                                        <a
+                                            rel="noreferrer"
+                                            href={selectedProject.github}
+                                            target="_blank"
+                                            alt="Lien vers le dépôt github"
+                                        >
+                                            <img
+                                                className="page-project-icon"
+                                                src={GitHubIcon}
+                                                alt="Icon Link to GitHub repository"
+                                            />
+                                        </a>
+                                        {selectedProject.link.length > 0 ? (
+                                            <a
+                                                rel="noreferrer"
+                                                target="_blank"
+                                                href={selectedProject.link}
+                                            >
+                                                <img
+                                                    className="page-project-icon"
+                                                    src={PlayIcon}
+                                                    alt="Icon Link to the project"
+                                                />
+                                            </a>
+                                        ) : null}
+                                    </div>
+                                </div>
                             </div>
                             <div
                                 className="page-project-technologies"

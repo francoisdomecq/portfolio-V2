@@ -44,7 +44,7 @@ function Carousel({ children, descriptions }) {
         onSwipedLeft: () => updateIndex(activeIndex + 1),
         onSwipedRight: () => updateIndex(activeIndex - 1),
     });
-
+    const nbrImages = React.Children.count(children);
     return (
         <div
             {...handlers}
@@ -52,6 +52,7 @@ function Carousel({ children, descriptions }) {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
         >
+            {console.log('images:', nbrImages)}
             <div className="inner-bg">
                 <button
                     onClick={() => updateIndex(activeIndex - 1)}
@@ -79,10 +80,11 @@ function Carousel({ children, descriptions }) {
                 </button>
             </div>
             <div className="description-image">
-                <p style={{ color: 'white' }}>{descriptions[activeIndex]}</p>
+                <p className='description-image-text'>{descriptions[activeIndex]}</p>
             </div>
             <div className="indicators">
-                {React.Children.map(children, (child, index) => {
+            
+                {/* {React.Children.map(children, (child, index) => {
                     return (
                         <button
                             className={`${
@@ -95,7 +97,8 @@ function Carousel({ children, descriptions }) {
                             {index + 1}
                         </button>
                     );
-                })}
+                })} */}
+                {/*ptr ajouter description plus détaillée */}
             </div>
         </div>
     );

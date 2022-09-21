@@ -85,9 +85,9 @@
 }
 
 .page-project-project-title {
+    font-family: 'Nexa';
     font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: uppercase;
+
     color: aqua;
     text-align: center;
 }
@@ -134,6 +134,12 @@
     background-color: #2f2f3a;
     padding: 1em;
     border-radius: 1em;
+}
+
+.page-project-links-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0 1em;
 }
 
 .page-project-bottom-container {
@@ -190,6 +196,7 @@
 }
 
 .page-project-description-text {
+    font-family: 'Hauora Sans';
     color: rgb(236, 230, 230);
 }
 

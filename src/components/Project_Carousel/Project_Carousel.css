@@ -98,3 +98,10 @@
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
+
+.description-image-text {
+    font-family: 'Hauora Sans';
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+}

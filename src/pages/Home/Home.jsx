@@ -106,7 +106,11 @@ function Home() {
                     </button>
                 </a>
             </div>
-            <img className="photo-fr" src={PhotoFrBg}></img>
+            <img
+                className="photo-fr"
+                src={PhotoFrBg}
+                alt="François Domecq"
+            ></img>
             {/*Ajouter une animation à droite qui lorsque l'on clique dessus redirige vers la page avec un jeu que je dois coder, ajouter leaderbord avec mail */}
         </section>
     );
