@@ -26,6 +26,18 @@ import RapJeu5 from '../assets/RapJeu/RapJeu5.jpg';
 import RapJeu6 from '../assets/RapJeu/RapJeu6.jpg';
 import RapJeu7 from '../assets/RapJeu/RapJeu7.jpg';
 
+import RogueLike1 from '../assets/RogueLike/RogueLike1.jpg';
+import RogueLike2 from '../assets/RogueLike/RogueLike2.jpg';
+import RogueLike3 from '../assets/RogueLike/RogueLike3.jpg';
+import RogueLike4 from '../assets/RogueLike/RogueLike4.jpg';
+import RogueLike5 from '../assets/RogueLike/RogueLike5.png';
+import RogueLike6 from '../assets/RogueLike/RogueLike6.jpg';
+import RogueLike7 from '../assets/RogueLike/RogueLike7.jpg';
+import RogueLike8 from '../assets/RogueLike/RogueLike8.jpg';
+import RogueLike9 from '../assets/RogueLike/RogueLike9.jpg';
+import RogueLike10 from '../assets/RogueLike/RogueLike10.jpg';
+import RogueLike11 from '../assets/RogueLike/RogueLike11.jpg';
+
 import { siReact } from 'simple-icons/icons';
 import { siDotnet } from 'simple-icons/icons';
 import { siAzuredevops } from 'simple-icons/icons';
@@ -209,10 +221,22 @@ export const projectsData = [
         name: 'RogueLike Pirate',
         src: RogueLike,
         descriptionEn:
-            'RogueLike game, programmed as a console application, where the player evolves in a pirate universe, génération map aléatoire, comportement des monstres pour combat, modification tileset',
+            'RogueLike game, programmed as a console application, where the player evolves in a pirate universe.',
         languages: ['C#'],
         carousel: {
-            images: [],
+            images: [
+                RogueLike1,
+                RogueLike2,
+                RogueLike3,
+                RogueLike4,
+                // RogueLike5,
+                RogueLike6,
+                RogueLike7,
+                RogueLike8,
+                RogueLike9,
+                RogueLike10,
+                RogueLike11,
+            ],
             description: ['image1', 'image2', 'image3', 'image4', 'image5'],
         },
         descriptionLongueEn: (
@@ -226,7 +250,10 @@ export const projectsData = [
                     place in a pirate world. Scénario, modification du tileset,
                     diagramme de classe
                 </p>
-                <p>On this game, you can 15 niveaux, trouver parchemins</p>
+                <p>On this game, you can 15 niveaux, trouver parchemins</p>,
+                génération map aléatoire, comportement des monstres pour combat,
+                modification tileset, clé pour passer niveaux, shopping,
+                capacités, items, équipement, inventaire
             </div>
         ),
         iconLanguages: [{ icon: siCsharp, slug: 'C#' }],
