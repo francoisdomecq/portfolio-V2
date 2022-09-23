@@ -194,7 +194,10 @@ export const projectsData = [
         languages: ['React Native', 'Typescript', 'Node JS'],
         carousel: {
             images: [BaroudeursImg1, BaroudeursImg2],
-            description: ['image1', 'image2'],
+            description: [
+                'City picking screen & Bordeaux map view screen & Point of interest details screen',
+                'Parameters screen & Success screen & Street view screen',
+            ],
         },
         descriptionLongueEn: (
             <div>
@@ -225,7 +228,7 @@ export const projectsData = [
             { icon: siMongodb, slug: 'Mongo DB' },
         ],
         iconSlug: ['React', '.Net', 'Azure'],
-        duration: '2 months',
+        duration: '1 month',
         team: '1 student',
         github: 'https://github.com/francoisdomecq/Baroudeurs.git',
         link: '',
